@@ -1,20 +1,24 @@
 //
 //  ViewController.h
-//  stopwatchtest
+//  PositiveFeedback
 //
 //  Created by Sam Gardner on 11/30/17.
 //  Copyright © 2017 Sam Gardner. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-NSTimeInterval *timerCount;
+NSTimeInterval *timerCountS;
+NSInteger *timerCountMInt;
 @interface ViewController : UIViewController{
-    IBOutlet UILabel *timerCountLabel;
+    IBOutlet UILabel *timerCountSLabel;
+    IBOutlet UILabel *timerCountMLabel;
     
-    NSTimer *timer;
+    NSTimer *secondsTimer;
+    NSTimer *minutesTimer;
     NSDate *startTime;
 }
--(void)updateLabel;
+-(void)updateSeconds;
+-(void)updateMinutes;
 -(IBAction)startTimer:(id)sender;
 -(IBAction)stopTimer:(id)sender;
 -(IBAction)resetTimer:(id)sender;
