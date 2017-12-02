@@ -16,6 +16,7 @@ NSInteger *timerCountMInt;
     NSTimer *secondsTimer;
     NSTimer *minutesTimer;
     NSDate *startTime;
+    NSDate *relativeStartTime;
 }
 -(void)updateSeconds;
 -(void)updateMinutes;
