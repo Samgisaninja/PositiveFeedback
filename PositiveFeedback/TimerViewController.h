@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TimerViewController.h
 //  PositiveFeedback
 //
 //  Created by Sam Gardner on 11/30/17.
@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>{
+@interface TimerViewController : UIViewController{
     IBOutlet UILabel *timerCountSLabel;
     IBOutlet UILabel *timerCountMLabel;
     NSTimeInterval *timerCountS;
@@ -17,7 +17,6 @@
     NSDate *startTime;
     NSDate *relativeStartTime;
 }
-@property (weak, nonatomic) IBOutlet UIPickerView *goalTimePicker;
 -(void)updateSeconds;
 -(void)updateMinutes;
 -(IBAction)startTimer:(id)sender;
@@ -25,4 +24,5 @@
 -(IBAction)resetTimer:(id)sender;
 
 @end
+
 
