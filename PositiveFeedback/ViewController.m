@@ -64,6 +64,7 @@
     timerCountMInt = 0;
     secondsTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateSeconds) userInfo:nil repeats:YES];
     minutesTimer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(updateMinutes) userInfo:nil repeats:YES];
+    [minutesTimer fire];
 }
 -(IBAction)stopTimer:(id)sender{
     [secondsTimer fire];
