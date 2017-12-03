@@ -7,17 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-NSTimeInterval *timerCountS;
-NSInteger *timerCountMInt;
-@interface ViewController : UIViewController{
+@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>{
     IBOutlet UILabel *timerCountSLabel;
     IBOutlet UILabel *timerCountMLabel;
-    
+    NSTimeInterval *timerCountS;
+    NSInteger *timerCountMInt;
     NSTimer *secondsTimer;
     NSTimer *minutesTimer;
     NSDate *startTime;
     NSDate *relativeStartTime;
 }
+@property (weak, nonatomic) IBOutlet UIPickerView *goalTimePicker;
 -(void)updateSeconds;
 -(void)updateMinutes;
 -(IBAction)startTimer:(id)sender;
