@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@interface TimeViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>{
+@interface TimePickerViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>{
 }
 @property (weak, nonatomic) IBOutlet UIPickerView *goalTimePicker;
 @end

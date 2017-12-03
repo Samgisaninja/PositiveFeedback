@@ -6,15 +6,15 @@
 //  Copyright © 2017 Sam Gardner. All rights reserved.
 //
 
-#import "TimeViewController.h"
+#import "TimePickerViewController.h"
 
-@interface TimeViewController (){
+@interface TimePickerViewController (){
     NSArray *_goalMinutesPickerData;
     NSArray *_goalSecondsPickerData;
 }
 @end
 
-@implementation TimeViewController
+@implementation TimePickerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

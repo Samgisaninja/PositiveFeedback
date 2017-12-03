@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D1205A41FD0D33900691524 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1205A31FD0D33900691524 /* AppDelegate.m */; };
-		8D1205A71FD0D33900691524 /* TimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1205A61FD0D33900691524 /* TimeViewController.m */; };
+		8D1205A71FD0D33900691524 /* TimePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1205A61FD0D33900691524 /* TimePickerViewController.m */; };
 		8D1205AA1FD0D33900691524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D1205A81FD0D33900691524 /* Main.storyboard */; };
 		8D1205AC1FD0D33900691524 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D1205AB1FD0D33900691524 /* Assets.xcassets */; };
 		8D1205AF1FD0D33900691524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D1205AD1FD0D33900691524 /* LaunchScreen.storyboard */; };
@@ -20,8 +20,8 @@
 		8D12059F1FD0D33900691524 /* PositiveFeedback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PositiveFeedback.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1205A21FD0D33900691524 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8D1205A31FD0D33900691524 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8D1205A51FD0D33900691524 /* TimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeViewController.h; sourceTree = "<group>"; };
-		8D1205A61FD0D33900691524 /* TimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeViewController.m; sourceTree = "<group>"; };
+		8D1205A51FD0D33900691524 /* TimePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimePickerViewController.h; sourceTree = "<group>"; };
+		8D1205A61FD0D33900691524 /* TimePickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimePickerViewController.m; sourceTree = "<group>"; };
 		8D1205A91FD0D33900691524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D1205AB1FD0D33900691524 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D1205AE1FD0D33900691524 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,8 +63,8 @@
 			children = (
 				8D1205A21FD0D33900691524 /* AppDelegate.h */,
 				8D1205A31FD0D33900691524 /* AppDelegate.m */,
-				8D1205A51FD0D33900691524 /* TimeViewController.h */,
-				8D1205A61FD0D33900691524 /* TimeViewController.m */,
+				8D1205A51FD0D33900691524 /* TimePickerViewController.h */,
+				8D1205A61FD0D33900691524 /* TimePickerViewController.m */,
 				8D65181D1FD3945F00AB167F /* TimerViewController.h */,
 				8D65181B1FD3940500AB167F /* TimerViewController.m */,
 				8D1205A81FD0D33900691524 /* Main.storyboard */,
@@ -148,7 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D65181C1FD3940500AB167F /* TimerViewController.m in Sources */,
-				8D1205A71FD0D33900691524 /* TimeViewController.m in Sources */,
+				8D1205A71FD0D33900691524 /* TimePickerViewController.m in Sources */,
 				8D1205B21FD0D33900691524 /* main.m in Sources */,
 				8D1205A41FD0D33900691524 /* AppDelegate.m in Sources */,
 			);
