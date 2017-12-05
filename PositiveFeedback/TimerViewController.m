@@ -19,6 +19,13 @@
     timerCountMInt = 0;
     timerCountSLabel.text = [NSString stringWithFormat:@"00.0"];
     timerCountMLabel.text = [NSString stringWithFormat:@"00"];
+    _releaseHintLabel.hidden = TRUE;
+    stopUIButton.hidden = TRUE;
+    [stopUIButton setUserInteractionEnabled:FALSE];
+    [stopUIButton setEnabled:FALSE];
+    startUIButton.hidden = FALSE;
+    [stopUIButton setUserInteractionEnabled:TRUE];
+    [stopUIButton setEnabled:TRUE];
 }
 
 
@@ -58,6 +65,20 @@
     secondsTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateSeconds) userInfo:nil repeats:YES];
     minutesTimer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(updateMinutes) userInfo:nil repeats:YES];
     [minutesTimer fire];
+    _releaseHintLabel.hidden = TRUE;
+    stopUIButton.hidden = FALSE;
+    [stopUIButton setUserInteractionEnabled:TRUE];
+    [stopUIButton setEnabled:TRUE];
+    startUIButton.hidden = TRUE;
+    [stopUIButton setUserInteractionEnabled:FALSE];
+    [stopUIButton setEnabled:FALSE];
+    self.view.backgroundColor = [UIColor darkGrayColor];
+    
+}
+- (IBAction)startTouchDown:(id)sender {
+    self.view.backgroundColor = [UIColor greenColor];
+    _releaseHintLabel.hidden = FALSE;
+    
 }
 -(IBAction)stopTimer:(id)sender{
     [secondsTimer fire];

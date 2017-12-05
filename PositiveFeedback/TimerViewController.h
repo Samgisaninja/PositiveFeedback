@@ -15,10 +15,13 @@
     NSTimer *secondsTimer;
     NSTimer *minutesTimer;
     NSDate *startTime;
-    NSDate *relativeStartTime;
+    NSDate *relativeStartTime;    
+    IBOutlet UIButton *startUIButton;
+    IBOutlet UIButton *stopUIButton;
 }
 -(void)updateSeconds;
 -(void)updateMinutes;
+@property (strong, nonatomic) IBOutlet UILabel *releaseHintLabel;
 -(IBAction)startTimer:(id)sender;
 -(IBAction)stopTimer:(id)sender;
 -(IBAction)resetTimer:(id)sender;
