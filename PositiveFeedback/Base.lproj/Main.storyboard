@@ -91,11 +91,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGC-Fi-xhQ">
-                                <rect key="frame" x="16" y="20" width="343" height="237"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="237"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <state key="normal" title="Start">
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Hold and release to start">
                                     <color key="titleColor" red="1" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -117,18 +117,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UW0-Nu-1Ho">
-                                <rect key="frame" x="16" y="20" width="343" height="237"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <state key="normal" title="Stop">
-                                    <color key="titleColor" red="1" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="stopTimer:" destination="TXs-HP-k9T" eventType="touchDown" id="2Ye-Wo-MNL"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aiy-Ye-jli">
                                 <rect key="frame" x="150" y="597" width="74" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -147,7 +135,6 @@
                     <connections>
                         <outlet property="releaseHintLabel" destination="kEi-LI-ksK" id="eTZ-6o-tRb"/>
                         <outlet property="startUIButton" destination="SGC-Fi-xhQ" id="F18-1n-BsN"/>
-                        <outlet property="stopUIButton" destination="UW0-Nu-1Ho" id="fEg-v1-twg"/>
                         <outlet property="timerCountMLabel" destination="x16-ft-cZC" id="TUB-oj-BUo"/>
                         <outlet property="timerCountSLabel" destination="4vj-cA-zJr" id="rQ1-ek-sOW"/>
                     </connections>

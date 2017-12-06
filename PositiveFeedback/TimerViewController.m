@@ -7,7 +7,6 @@
 //
 
 #import "TimerViewController.h"
-
 @interface TimerViewController ()
 @end
 
@@ -20,12 +19,6 @@
     timerCountSLabel.text = [NSString stringWithFormat:@"00.0"];
     timerCountMLabel.text = [NSString stringWithFormat:@"00"];
     _releaseHintLabel.hidden = TRUE;
-    stopUIButton.hidden = TRUE;
-    [stopUIButton setUserInteractionEnabled:FALSE];
-    [stopUIButton setEnabled:FALSE];
-    startUIButton.hidden = FALSE;
-    [stopUIButton setUserInteractionEnabled:TRUE];
-    [stopUIButton setEnabled:TRUE];
 }
 
 
@@ -56,38 +49,41 @@
     relativeStartTime = [NSDate date];
 }
 -(IBAction)startTimer:(id)sender{
-    [secondsTimer invalidate];
-    [minutesTimer invalidate];
-    startTime = [NSDate date];
-    relativeStartTime = [NSDate date];
-    timerCountS = 0;
-    timerCountMInt = 0;
-    secondsTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateSeconds) userInfo:nil repeats:YES];
-    minutesTimer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(updateMinutes) userInfo:nil repeats:YES];
-    [minutesTimer fire];
-    _releaseHintLabel.hidden = TRUE;
-    stopUIButton.hidden = FALSE;
-    [stopUIButton setUserInteractionEnabled:TRUE];
-    [stopUIButton setEnabled:TRUE];
-    startUIButton.hidden = TRUE;
-    [stopUIButton setUserInteractionEnabled:FALSE];
-    [stopUIButton setEnabled:FALSE];
-    self.view.backgroundColor = [UIColor darkGrayColor];
-    
+    if ([justInvalidated isEqualToString:@"YES"]) {
+        justInvalidated = @"NO";
+    } else {
+        startTime = [NSDate date];
+        relativeStartTime = [NSDate date];
+        timerCountS = 0;
+        timerCountMInt = 0;
+        secondsTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(updateSeconds) userInfo:nil repeats:YES];
+        minutesTimer = [NSTimer scheduledTimerWithTimeInterval:60 target:self selector:@selector(updateMinutes) userInfo:nil repeats:YES];
+        [minutesTimer fire];
+        _releaseHintLabel.hidden = TRUE;
+        self.view.backgroundColor = [UIColor darkGrayColor];
+        [startUIButton setTitle:@"Stop" forState:UIControlStateNormal];
+    }
 }
 - (IBAction)startTouchDown:(id)sender {
-    self.view.backgroundColor = [UIColor greenColor];
-    _releaseHintLabel.hidden = FALSE;
-    
+    if ([secondsTimer isValid]) {
+        NSLog(@"Touch Down ELSE");
+        [secondsTimer fire];
+        [secondsTimer invalidate];
+        [minutesTimer invalidate];
+        justInvalidated = @"YES";
+        [startUIButton setTitle:@"Hold and release to start" forState:UIControlStateNormal];
+    } else {
+            self.view.backgroundColor = [UIColor greenColor];
+            _releaseHintLabel.hidden = FALSE;
+    }
 }
--(IBAction)stopTimer:(id)sender{
-    [secondsTimer fire];
-    [secondsTimer invalidate];
-}
+
 -(IBAction)resetTimer:(id)sender{
     [secondsTimer invalidate];
+    [minutesTimer invalidate];
     timerCountS = 0;
-    timerCountSLabel.text = [NSString stringWithFormat:@"00.0"];
-    timerCountMLabel.text = [NSString stringWithFormat:@"00"];
+    timerCountSLabel.text = [NSString stringWithFormat:@"0%.2f",timerCountS];
+    timerCountMLabel.text = [NSString stringWithFormat:@"0%.1ld",(long)timerCountMIntDivided];
+    
 }
 @end

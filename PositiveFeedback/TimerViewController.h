@@ -17,13 +17,13 @@
     NSDate *startTime;
     NSDate *relativeStartTime;    
     IBOutlet UIButton *startUIButton;
-    IBOutlet UIButton *stopUIButton;
+    NSString *justInvalidated;
+    long *timerCountMIntDivided;
 }
 -(void)updateSeconds;
 -(void)updateMinutes;
 @property (strong, nonatomic) IBOutlet UILabel *releaseHintLabel;
 -(IBAction)startTimer:(id)sender;
--(IBAction)stopTimer:(id)sender;
 -(IBAction)resetTimer:(id)sender;
 
 @end
