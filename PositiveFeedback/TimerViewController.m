@@ -71,6 +71,7 @@
     timeElapsed = 0;
     timerCountSLabel.text = [NSString stringWithFormat:@"00.00"];
     timerCountMLabel.text = [NSString stringWithFormat:@"00"];
+    [startUIButton setTitle:@"Hold and release to start" forState:UIControlStateNormal];
     
 }
 @end
