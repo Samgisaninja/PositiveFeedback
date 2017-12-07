@@ -10,18 +10,13 @@
 @interface TimerViewController : UIViewController{
     IBOutlet UILabel *timerCountSLabel;
     IBOutlet UILabel *timerCountMLabel;
-    NSTimeInterval *timerCountS;
-    NSInteger *timerCountMInt;
+    NSTimeInterval *timeElapsed;
     NSTimer *secondsTimer;
-    NSTimer *minutesTimer;
     NSDate *startTime;
-    NSDate *relativeStartTime;    
     IBOutlet UIButton *startUIButton;
     NSString *justInvalidated;
-    long *timerCountMIntDivided;
 }
--(void)updateSeconds;
--(void)updateMinutes;
+-(void)update;
 @property (strong, nonatomic) IBOutlet UILabel *releaseHintLabel;
 -(IBAction)startTimer:(id)sender;
 -(IBAction)resetTimer:(id)sender;

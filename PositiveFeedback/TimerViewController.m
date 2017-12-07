@@ -14,8 +14,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    timerCountS = 0;
-    timerCountMInt = 0;
+    timeElapsed = 0;
     timerCountSLabel.text = [NSString stringWithFormat:@"00.0"];
     timerCountMLabel.text = [NSString stringWithFormat:@"00"];
     _releaseHintLabel.hidden = TRUE;
@@ -28,13 +27,13 @@
 }
 -(void)update{
     NSTimeInterval currentUnixTime = [[NSDate date] timeIntervalSince1970];
-    NSTimeInterval timerCountS = currentUnixTime - [startTime timeIntervalSince1970];
-    int minutesElapsed = (int) timerCountS / 60;
-    timerCountS -= minutesElapsed * 60;
-    if (timerCountS < 10) {
-        timerCountSLabel.text = [NSString stringWithFormat:@"0%.2f",timerCountS];
+    NSTimeInterval timeElapsed = currentUnixTime - [startTime timeIntervalSince1970];
+    int minutesElapsed = (int) timeElapsed / 60;
+    timeElapsed -= minutesElapsed * 60;
+    if (timeElapsed < 10) {
+        timerCountSLabel.text = [NSString stringWithFormat:@"0%.2f",timeElapsed];
     } else {
-        timerCountSLabel.text = [NSString stringWithFormat:@"%.2f",timerCountS];
+        timerCountSLabel.text = [NSString stringWithFormat:@"%.2f",timeElapsed];
     }
     if (minutesElapsed < 10) {
         timerCountMLabel.text = [NSString stringWithFormat:@"0%.1d",minutesElapsed];
@@ -47,9 +46,7 @@
         justInvalidated = @"NO";
     } else {
         startTime = [NSDate date];
-        relativeStartTime = [NSDate date];
-        timerCountS = 0;
-        timerCountMInt = 0;
+        timeElapsed = 0;
         secondsTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(update) userInfo:nil repeats:YES];
         _releaseHintLabel.hidden = TRUE;
         self.view.backgroundColor = [UIColor darkGrayColor];
@@ -71,8 +68,8 @@
 
 -(IBAction)resetTimer:(id)sender{
     [secondsTimer invalidate];
-    timerCountS = 0;
-    timerCountSLabel.text = [NSString stringWithFormat:@"0%.2f", timerCountS];
+    timeElapsed = 0;
+    timerCountSLabel.text = [NSString stringWithFormat:@"0%.2", timeElapsed];
     
 }
 @end
