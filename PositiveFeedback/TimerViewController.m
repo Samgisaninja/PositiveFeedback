@@ -15,7 +15,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     timeElapsed = 0;
-    timerCountSLabel.text = [NSString stringWithFormat:@"00.0"];
+    timerCountSLabel.text = [NSString stringWithFormat:@"00.00"];
     timerCountMLabel.text = [NSString stringWithFormat:@"00"];
     _releaseHintLabel.hidden = TRUE;
 }
@@ -69,7 +69,8 @@
 -(IBAction)resetTimer:(id)sender{
     [secondsTimer invalidate];
     timeElapsed = 0;
-    timerCountSLabel.text = [NSString stringWithFormat:@"0%.2", timeElapsed];
+    timerCountSLabel.text = [NSString stringWithFormat:@"00.00"];
+    timerCountMLabel.text = [NSString stringWithFormat:@"00"];
     
 }
 @end
