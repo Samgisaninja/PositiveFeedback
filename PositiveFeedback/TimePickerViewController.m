@@ -44,4 +44,19 @@
     }
     
 }
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    if (component == 0) {
+        _goalMinutes = [_goalMinutesPickerData objectAtIndex:row];
+    } else {
+        _goalSeconds = [_goalSecondsPickerData objectAtIndex:row];
+    }
+    if (_goalMinutes == NULL) {
+        _goalMinutes = @"0";
+    }
+    if (_goalSeconds == NULL) {
+        _goalSeconds = @"0";
+    }
+    NSLog(@"%@:%@", _goalMinutes, _goalSeconds);
+}
 @end
