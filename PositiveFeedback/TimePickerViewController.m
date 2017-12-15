@@ -7,6 +7,7 @@
 //
 
 #import "TimePickerViewController.h"
+#import "TimerViewController.h"
 
 @interface TimePickerViewController (){
     NSArray *_goalMinutesPickerData;
@@ -58,5 +59,12 @@
         _goalSeconds = @"0";
     }
     NSLog(@"%@:%@", _goalMinutes, _goalSeconds);
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"goalDataShare"]) {
+        TimerViewController *destViewController = segue.destinationViewController;
+        destViewController.goalSeconds = _goalSeconds;
+        destViewController.goalMinutes = _goalMinutes;
+    }
 }
 @end

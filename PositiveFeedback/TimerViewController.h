@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TimePickerViewController.h"
+
 @interface TimerViewController : UIViewController{
     IBOutlet UILabel *timerCountSLabel;
     IBOutlet UILabel *timerCountMLabel;
@@ -20,6 +22,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *releaseHintLabel;
 -(IBAction)startTimer:(id)sender;
 -(IBAction)resetTimer:(id)sender;
+@property (strong, nonatomic) NSString *goalMinutes;
+@property (strong, nonatomic) NSString *goalSeconds;
 
 @end
 

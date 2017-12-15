@@ -11,6 +11,8 @@
 @end
 
 @implementation TimerViewController
+@synthesize goalSeconds;
+@synthesize goalMinutes;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -18,6 +20,7 @@
     timerCountSLabel.text = [NSString stringWithFormat:@"00.00"];
     timerCountMLabel.text = [NSString stringWithFormat:@"00"];
     _releaseHintLabel.hidden = TRUE;
+    NSLog(@"%@ %@", goalMinutes, goalSeconds);
 }
 
 
