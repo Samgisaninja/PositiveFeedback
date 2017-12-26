@@ -10,7 +10,7 @@
 @interface TimePickerViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>{
 }
 @property (weak, nonatomic) IBOutlet UIPickerView *goalTimePicker;
-@property (strong, nonatomic) NSString *goalMinutes;
-@property (strong, nonatomic) NSString *goalSeconds;
+@property (strong, nonatomic) NSNumber *goalMinutes;
+@property (strong, nonatomic) NSNumber *goalSeconds;
 @end
 

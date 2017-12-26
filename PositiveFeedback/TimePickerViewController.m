@@ -53,12 +53,11 @@
         _goalSeconds = [_goalSecondsPickerData objectAtIndex:row];
     }
     if (_goalMinutes == NULL) {
-        _goalMinutes = @"0";
+        _goalMinutes = 0;
     }
     if (_goalSeconds == NULL) {
-        _goalSeconds = @"0";
+        _goalSeconds = 0;
     }
-    NSLog(@"%@:%@", _goalMinutes, _goalSeconds);
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"goalDataShare"]) {
