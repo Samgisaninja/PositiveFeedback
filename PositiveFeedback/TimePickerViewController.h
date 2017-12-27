@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *goalTimePicker;
 @property (strong, nonatomic) NSNumber *goalMinutes;
 @property (strong, nonatomic) NSNumber *goalSeconds;
+@property (strong, nonatomic) NSString *runDistanceString;
 @end
 
