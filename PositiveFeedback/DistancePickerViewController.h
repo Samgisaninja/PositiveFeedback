@@ -10,6 +10,6 @@
 @interface DistancePickerViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>{
 }
 @property (strong, nonatomic) IBOutlet UIPickerView *distancePicker;
-@property (strong, nonatomic) NSString *runDistanceString;
+@property (strong, nonatomic) NSNumber *runDistance;
 @end
 

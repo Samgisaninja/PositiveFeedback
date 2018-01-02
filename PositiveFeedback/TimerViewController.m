@@ -14,18 +14,20 @@
 @implementation TimerViewController
 @synthesize goalSeconds;
 @synthesize goalMinutes;
+@synthesize runDistance;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"%@", runDistance);
     timerCountSLabel.text = [NSString stringWithFormat:@"00.00"];
     timerCountMLabel.text = [NSString stringWithFormat:@"00"];
     _releaseHintLabel.hidden = TRUE;
     timeElapsed = 0;
-    _runDistance = @(3.125);
+    runDistance = @(3.125);
     intervalsPassed = 0;
     _goalTime = [goalSeconds floatValue] + [goalMinutes floatValue] * 60;
     NSLog(@"%f", _goalTime);
-    _goalInterval = _goalTime / [_runDistance floatValue];
+    _goalInterval = _goalTime / [runDistance floatValue];
 }
 -(void)update{
     NSTimeInterval currentUnixTime = [[NSDate date] timeIntervalSince1970];
