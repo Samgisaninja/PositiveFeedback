@@ -18,7 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%@", runDistance);
     timerCountSLabel.text = [NSString stringWithFormat:@"00.00"];
     timerCountMLabel.text = [NSString stringWithFormat:@"00"];
     _releaseHintLabel.hidden = TRUE;
