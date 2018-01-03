@@ -22,11 +22,11 @@
     timerCountMLabel.text = [NSString stringWithFormat:@"00"];
     _releaseHintLabel.hidden = TRUE;
     timeElapsed = 0;
-    runDistance = @(3.125);
     intervalsPassed = 0;
     _goalTime = [goalSeconds floatValue] + [goalMinutes floatValue] * 60;
     NSLog(@"%f", _goalTime);
     _goalInterval = _goalTime / [runDistance floatValue];
+    self.progressBar.progress = 0;
 }
 -(void)update{
     NSTimeInterval currentUnixTime = [[NSDate date] timeIntervalSince1970];
