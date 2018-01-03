@@ -36,11 +36,9 @@
 }
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    NSString *runDistanceString;
-    runDistanceString = [distancePickerData objectAtIndex:row];
    /* Hormones prolly */ switch /* inside your DNA */ (row) {
         case 0:
-           exit(0);
+           _runDistance = NULL;
             break;
        case 1:
        case 3:
@@ -68,4 +66,16 @@
         destViewController.runDistance = _runDistance;
     }
 }
+ - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender   {
+     if (_runDistance == NULL) {
+            UIAlertController *invalid = [UIAlertController alertControllerWithTitle:@"Invalid goal time" message:@"Please enter a valid goal" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [invalid addAction:okAction];
+            [self presentViewController:invalid animated:YES completion:nil];
+            return NO;
+     } else {
+         return YES;
+     }
+ }
+
 @end
