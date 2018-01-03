@@ -68,4 +68,19 @@
         destViewController.runDistance = runDistance;
     }
 }
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender   {
+    if (_goalMinutes == 0) {
+        if (_goalSeconds == 0) {
+            UIAlertController *invalid = [UIAlertController alertControllerWithTitle:@"Invalid goal time" message:@"Please enter a valid goal" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *exitApp = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [invalid addAction:exitApp];
+            [self presentViewController:invalid animated:YES completion:nil];
+            return NO;
+        } else {
+            return YES;
+        }
+    } else {
+        return YES;
+    }
+}
 @end
