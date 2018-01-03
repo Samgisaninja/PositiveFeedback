@@ -49,11 +49,8 @@
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     }
     self.progressBar.progress = timeElapsed / _goalTime;
-    if (timeElapsed > _goalTime + 0.1) {
-        [secondsTimer fire];
-        [secondsTimer invalidate];
-        justInvalidated = @"YES";
-        [startUIButton setTitle:@"Hold and release to start" forState:UIControlStateNormal];
+    if (timeElapsed > _goalTime) {
+        [self resetTimer];
     }
     
 }
@@ -81,13 +78,18 @@
             _releaseHintLabel.hidden = FALSE;
     }
 }
+- (IBAction)clearTimer:(id)sender {
+    [self resetTimer];
+}
 
--(IBAction)resetTimer:(id)sender{
+    
+
+-(void)resetTimer{
     [secondsTimer invalidate];
     timeElapsed = 0;
     timerCountSLabel.text = [NSString stringWithFormat:@"00.00"];
     timerCountMLabel.text = [NSString stringWithFormat:@"00"];
+    self.progressBar.progress = 0;
     [startUIButton setTitle:@"Hold and release to start" forState:UIControlStateNormal];
-    
 }
 @end

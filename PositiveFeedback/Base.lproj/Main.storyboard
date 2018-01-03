@@ -162,6 +162,7 @@
                                     <color key="titleColor" red="1" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="clearTimer:" destination="TXs-HP-k9T" eventType="touchUpInside" id="4GZ-5g-Fja"/>
                                     <action selector="resetTimer:" destination="TXs-HP-k9T" eventType="touchDown" id="znr-7E-udz"/>
                                 </connections>
                             </button>
