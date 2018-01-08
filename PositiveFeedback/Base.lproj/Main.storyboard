@@ -162,8 +162,7 @@
                                     <color key="titleColor" red="1" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="clearTimer:" destination="TXs-HP-k9T" eventType="touchUpInside" id="4GZ-5g-Fja"/>
-                                    <action selector="resetTimer:" destination="TXs-HP-k9T" eventType="touchDown" id="znr-7E-udz"/>
+                                    <action selector="clearTimer:" destination="TXs-HP-k9T" eventType="touchDown" id="Iwk-3H-e8Y"/>
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" restorationIdentifier="progressBar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="y0I-EE-gWl">
