@@ -56,7 +56,6 @@
        case 6:
            _runDistance = @(5.0);
         default:
-           exit(0);
             break;
     }
 }
