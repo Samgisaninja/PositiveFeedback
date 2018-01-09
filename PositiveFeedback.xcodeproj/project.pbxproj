@@ -14,8 +14,57 @@
 		8D1205AF1FD0D33900691524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D1205AD1FD0D33900691524 /* LaunchScreen.storyboard */; };
 		8D1205B21FD0D33900691524 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1205B11FD0D33900691524 /* main.m */; };
 		8D65181C1FD3940500AB167F /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D65181B1FD3940500AB167F /* TimerViewController.m */; };
+		8DAEC21A20044D0D00EDB61F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DAEC21820044D0D00EDB61F /* Interface.storyboard */; };
+		8DAEC21C20044D0D00EDB61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DAEC21B20044D0D00EDB61F /* Assets.xcassets */; };
+		8DAEC22320044D0D00EDB61F /* PositiveFeedback-watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8DAEC22220044D0D00EDB61F /* PositiveFeedback-watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8DAEC22920044D0D00EDB61F /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEC22820044D0D00EDB61F /* InterfaceController.m */; };
+		8DAEC22C20044D0D00EDB61F /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEC22B20044D0D00EDB61F /* ExtensionDelegate.m */; };
+		8DAEC22E20044D0D00EDB61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DAEC22D20044D0D00EDB61F /* Assets.xcassets */; };
+		8DAEC23220044D0D00EDB61F /* PositiveFeedback-watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8DAEC21620044D0C00EDB61F /* PositiveFeedback-watchOS.app */; };
 		8DD5143E1FF2FA5F00BC6247 /* DistancePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5143D1FF2FA5F00BC6247 /* DistancePickerViewController.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8DAEC22420044D0D00EDB61F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D1205971FD0D33900691524 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DAEC22120044D0D00EDB61F;
+			remoteInfo = "PositiveFeedback-watchOS Extension";
+		};
+		8DAEC23020044D0D00EDB61F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D1205971FD0D33900691524 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DAEC21520044D0C00EDB61F;
+			remoteInfo = "PositiveFeedback-watchOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DAEC23820044D0D00EDB61F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8DAEC22320044D0D00EDB61F /* PositiveFeedback-watchOS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DAEC23A20044D0D00EDB61F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				8DAEC23220044D0D00EDB61F /* PositiveFeedback-watchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8D12059F1FD0D33900691524 /* PositiveFeedback.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PositiveFeedback.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,12 +79,30 @@
 		8D1205B11FD0D33900691524 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D65181B1FD3940500AB167F /* TimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		8D65181D1FD3945F00AB167F /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		8DAEC21620044D0C00EDB61F /* PositiveFeedback-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PositiveFeedback-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DAEC21920044D0D00EDB61F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		8DAEC21B20044D0D00EDB61F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8DAEC21D20044D0D00EDB61F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DAEC22220044D0D00EDB61F /* PositiveFeedback-watchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PositiveFeedback-watchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DAEC22720044D0D00EDB61F /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		8DAEC22820044D0D00EDB61F /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		8DAEC22A20044D0D00EDB61F /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		8DAEC22B20044D0D00EDB61F /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		8DAEC22D20044D0D00EDB61F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8DAEC22F20044D0D00EDB61F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DD5143C1FF2FA5F00BC6247 /* DistancePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistancePickerViewController.h; sourceTree = "<group>"; };
 		8DD5143D1FF2FA5F00BC6247 /* DistancePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistancePickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8D12059C1FD0D33900691524 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DAEC21F20044D0D00EDB61F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				8D1205A11FD0D33900691524 /* PositiveFeedback */,
+				8DAEC21720044D0C00EDB61F /* PositiveFeedback-watchOS */,
+				8DAEC22620044D0D00EDB61F /* PositiveFeedback-watchOS Extension */,
 				8D1205A01FD0D33900691524 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				8D12059F1FD0D33900691524 /* PositiveFeedback.app */,
+				8DAEC21620044D0C00EDB61F /* PositiveFeedback-watchOS.app */,
+				8DAEC22220044D0D00EDB61F /* PositiveFeedback-watchOS Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +152,29 @@
 			path = PositiveFeedback;
 			sourceTree = "<group>";
 		};
+		8DAEC21720044D0C00EDB61F /* PositiveFeedback-watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				8DAEC21820044D0D00EDB61F /* Interface.storyboard */,
+				8DAEC21B20044D0D00EDB61F /* Assets.xcassets */,
+				8DAEC21D20044D0D00EDB61F /* Info.plist */,
+			);
+			path = "PositiveFeedback-watchOS";
+			sourceTree = "<group>";
+		};
+		8DAEC22620044D0D00EDB61F /* PositiveFeedback-watchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8DAEC22720044D0D00EDB61F /* InterfaceController.h */,
+				8DAEC22820044D0D00EDB61F /* InterfaceController.m */,
+				8DAEC22A20044D0D00EDB61F /* ExtensionDelegate.h */,
+				8DAEC22B20044D0D00EDB61F /* ExtensionDelegate.m */,
+				8DAEC22D20044D0D00EDB61F /* Assets.xcassets */,
+				8DAEC22F20044D0D00EDB61F /* Info.plist */,
+			);
+			path = "PositiveFeedback-watchOS Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,15 +185,51 @@
 				8D12059B1FD0D33900691524 /* Sources */,
 				8D12059C1FD0D33900691524 /* Frameworks */,
 				8D12059D1FD0D33900691524 /* Resources */,
+				8DAEC23A20044D0D00EDB61F /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8DAEC23120044D0D00EDB61F /* PBXTargetDependency */,
 			);
 			name = PositiveFeedback;
 			productName = PositiveFeedback;
 			productReference = 8D12059F1FD0D33900691524 /* PositiveFeedback.app */;
 			productType = "com.apple.product-type.application";
+		};
+		8DAEC21520044D0C00EDB61F /* PositiveFeedback-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DAEC23920044D0D00EDB61F /* Build configuration list for PBXNativeTarget "PositiveFeedback-watchOS" */;
+			buildPhases = (
+				8DAEC21420044D0C00EDB61F /* Resources */,
+				8DAEC23820044D0D00EDB61F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8DAEC22520044D0D00EDB61F /* PBXTargetDependency */,
+			);
+			name = "PositiveFeedback-watchOS";
+			productName = "PositiveFeedback-watchOS";
+			productReference = 8DAEC21620044D0C00EDB61F /* PositiveFeedback-watchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		8DAEC22120044D0D00EDB61F /* PositiveFeedback-watchOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DAEC23720044D0D00EDB61F /* Build configuration list for PBXNativeTarget "PositiveFeedback-watchOS Extension" */;
+			buildPhases = (
+				8DAEC21E20044D0D00EDB61F /* Sources */,
+				8DAEC21F20044D0D00EDB61F /* Frameworks */,
+				8DAEC22020044D0D00EDB61F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PositiveFeedback-watchOS Extension";
+			productName = "PositiveFeedback-watchOS Extension";
+			productReference = 8DAEC22220044D0D00EDB61F /* PositiveFeedback-watchOS Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -112,6 +242,14 @@
 				TargetAttributes = {
 					8D12059E1FD0D33900691524 = {
 						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					8DAEC21520044D0C00EDB61F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					8DAEC22120044D0D00EDB61F = {
+						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -130,6 +268,8 @@
 			projectRoot = "";
 			targets = (
 				8D12059E1FD0D33900691524 /* PositiveFeedback */,
+				8DAEC21520044D0C00EDB61F /* PositiveFeedback-watchOS */,
+				8DAEC22120044D0D00EDB61F /* PositiveFeedback-watchOS Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -142,6 +282,23 @@
 				8D1205AF1FD0D33900691524 /* LaunchScreen.storyboard in Resources */,
 				8D1205AC1FD0D33900691524 /* Assets.xcassets in Resources */,
 				8D1205AA1FD0D33900691524 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DAEC21420044D0C00EDB61F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DAEC21C20044D0D00EDB61F /* Assets.xcassets in Resources */,
+				8DAEC21A20044D0D00EDB61F /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DAEC22020044D0D00EDB61F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DAEC22E20044D0D00EDB61F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +317,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8DAEC21E20044D0D00EDB61F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DAEC22C20044D0D00EDB61F /* ExtensionDelegate.m in Sources */,
+				8DAEC22920044D0D00EDB61F /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8DAEC22520044D0D00EDB61F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DAEC22120044D0D00EDB61F /* PositiveFeedback-watchOS Extension */;
+			targetProxy = 8DAEC22420044D0D00EDB61F /* PBXContainerItemProxy */;
+		};
+		8DAEC23120044D0D00EDB61F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DAEC21520044D0C00EDB61F /* PositiveFeedback-watchOS */;
+			targetProxy = 8DAEC23020044D0D00EDB61F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8D1205A81FD0D33900691524 /* Main.storyboard */ = {
@@ -177,6 +356,14 @@
 				8D1205AE1FD0D33900691524 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8DAEC21820044D0D00EDB61F /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DAEC21920044D0D00EDB61F /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -314,6 +501,74 @@
 			};
 			name = Release;
 		};
+		8DAEC23320044D0D00EDB61F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62PB6NV7YN;
+				IBSC_MODULE = PositiveFeedback_watchOS_Extension;
+				INFOPLIST_FILE = "PositiveFeedback-watchOS/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.samgisaninja.PositiveFeedback.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		8DAEC23420044D0D00EDB61F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62PB6NV7YN;
+				IBSC_MODULE = PositiveFeedback_watchOS_Extension;
+				INFOPLIST_FILE = "PositiveFeedback-watchOS/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.samgisaninja.PositiveFeedback.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		8DAEC23520044D0D00EDB61F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62PB6NV7YN;
+				INFOPLIST_FILE = "PositiveFeedback-watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.samgisaninja.PositiveFeedback.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		8DAEC23620044D0D00EDB61F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62PB6NV7YN;
+				INFOPLIST_FILE = "PositiveFeedback-watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.samgisaninja.PositiveFeedback.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -331,6 +586,24 @@
 			buildConfigurations = (
 				8D1205B61FD0D33900691524 /* Debug */,
 				8D1205B71FD0D33900691524 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DAEC23720044D0D00EDB61F /* Build configuration list for PBXNativeTarget "PositiveFeedback-watchOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DAEC23520044D0D00EDB61F /* Debug */,
+				8DAEC23620044D0D00EDB61F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DAEC23920044D0D00EDB61F /* Build configuration list for PBXNativeTarget "PositiveFeedback-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DAEC23320044D0D00EDB61F /* Debug */,
+				8DAEC23420044D0D00EDB61F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
