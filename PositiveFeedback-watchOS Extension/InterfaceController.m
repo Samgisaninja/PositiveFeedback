@@ -19,8 +19,9 @@
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     //viewDidntLoad!
-    timerCountSLabel.text = [NSString stringWithFormat:@"00.00"];
-    timerCountMLabel.text = [NSString stringWithFormat:@"00"];
+    _timerCountMLabel.text = [NSString stringWithFormat:@"00"];
+    _timerCountSLabel.text = [NSString stringWithFormat:@"00.00"];
+   // timerCountMLabel.text = [NSString stringWithFormat:@"00"];
     timeElapsed = 0;
     intervalsPassed = 0;
     /* _goalTime = [goalSeconds floatValue] + [goalMinutes floatValue] * 60;
@@ -44,14 +45,14 @@
     int minutesElapsed = (int) timeElapsed / 60;
     timeElapsed -= minutesElapsed * 60;
     if (timeElapsed < 10) {
-        timerCountSLabel.text = [NSString stringWithFormat:@"0%.2f",timeElapsed];
+        _timerCountSLabel.text = [NSString stringWithFormat:@"0%.2f",timeElapsed];
     } else {
-        timerCountSLabel.text = [NSString stringWithFormat:@"%.2f",timeElapsed];
+        _timerCountSLabel.text = [NSString stringWithFormat:@"%.2f",timeElapsed];
     }
     if (minutesElapsed < 10) {
-        timerCountMLabel.text = [NSString stringWithFormat:@"0%.1d",minutesElapsed];
+        _timerCountMLabel.text = [NSString stringWithFormat:@"0%.1d",minutesElapsed];
     } else {
-        timerCountMLabel.text = [NSString stringWithFormat:@"%.1d",minutesElapsed];
+        _timerCountMLabel.text = [NSString stringWithFormat:@"%.1d",minutesElapsed];
     }
     /* float progressToInterval = currentUnixTime - [relativeStartTime timeIntervalSince1970];
     if (progressToInterval > _goalInterval) {
@@ -90,8 +91,8 @@
 -(void)resetTimer{
     [secondsTimer invalidate];
     timeElapsed = 0;
-    timerCountSLabel.text = [NSString stringWithFormat:@"00.00"];
-    timerCountMLabel.text = [NSString stringWithFormat:@"00"];
+    _timerCountSLabel.text = [NSString stringWithFormat:@"00.00"];
+    _timerCountMLabel.text = [NSString stringWithFormat:@"00"];
     //self.progressBar.progress = 0;
     [startWKInterfaceButton setTitle:@"Hold and release to start"];
 }

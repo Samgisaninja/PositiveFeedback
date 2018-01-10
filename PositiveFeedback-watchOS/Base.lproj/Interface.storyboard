@@ -9,10 +9,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--InterfaceController-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                <controller identifier="InterfaceController" id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
                         <group width="1" alignment="left" id="Mrw-qs-4qI">
                             <items>
@@ -35,8 +35,8 @@
                     </items>
                     <connections>
                         <outlet property="startWKInterfaceButton" destination="rVl-1X-ORl" id="gWc-d3-e5d"/>
-                        <outlet property="timerCountMLabel" destination="WCl-kD-e11" id="qwA-ke-UPD"/>
-                        <outlet property="timerCountSLabel" destination="o1p-dF-D05" id="JTk-Kd-Krt"/>
+                        <outlet property="timerCountMLabel" destination="WCl-kD-e11" id="6c8-ES-d6t"/>
+                        <outlet property="timerCountSLabel" destination="o1p-dF-D05" id="6Re-Br-YZR"/>
                     </connections>
                 </controller>
             </objects>

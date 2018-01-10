@@ -10,8 +10,6 @@
 #import <Foundation/Foundation.h>
 
 @interface InterfaceController : WKInterfaceController{
-    IBOutlet WKInterfaceLabel *timerCountSLabel;
-    IBOutlet WKInterfaceLabel *timerCountMLabel;
     NSTimeInterval *timeElapsed;
     NSTimer *secondsTimer;
     NSDate *startTime;
@@ -24,6 +22,8 @@
 -(void)resetTimer;
 // @property (strong, nonatomic) IBOutlet UIProgressView *progressBar;
 -(IBAction)startTimer:(id)sender;
+@property IBOutlet WKInterfaceLabel *timerCountSLabel;
+@property IBOutlet WKInterfaceLabel *timerCountMLabel;
 @property (strong, nonatomic) NSNumber *goalMinutes;
 @property (strong, nonatomic) NSNumber *goalSeconds;
 @property (strong, nonatomic) NSNumber *runDistance;
