@@ -21,7 +21,8 @@
     //viewDidntLoad!
     _timerCountMLabel.text = [NSString stringWithFormat:@"00"];
     _timerCountSLabel.text = [NSString stringWithFormat:@"00.00"];
-   // timerCountMLabel.text = [NSString stringWithFormat:@"00"];
+    [_startWKInterfaceButton setTitle:@"Hold and release to start"];
+    [_stopWKInterfaceButton setHidden:TRUE];
     timeElapsed = 0;
     intervalsPassed = 0;
     /* _goalTime = [goalSeconds floatValue] + [goalMinutes floatValue] * 60;
@@ -67,34 +68,31 @@
     */
 }
 -(IBAction)startTimer:(id)sender{
-    if ([justInvalidated isEqualToString:@"YES"]) {
-        justInvalidated = @"NO";
-    } else {
         startTime = [NSDate date];
         relativeStartTime = [NSDate date];
         timeElapsed = 0;
         secondsTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(update) userInfo:nil repeats:YES];
-        [startWKInterfaceButton setTitle:@"Stop"];
-    }
+    [_startWKInterfaceButton setHidden:TRUE];
+    [_stopWKInterfaceButton setHidden:FALSE];
 }
 
-- (IBAction)startTouchDown:(id)sender {
-    if ([secondsTimer isValid]) {
+- (IBAction)stopTimer:(id)sender {
         [secondsTimer fire];
         [secondsTimer invalidate];
-        justInvalidated = @"YES";
-        [startWKInterfaceButton setTitle:@"Hold and release to start"];
-    } else {
-    }
+        [_startWKInterfaceButton setTitle:@"Hold and release to start"];
+    [_startWKInterfaceButton setHidden:FALSE];
+    [_stopWKInterfaceButton setHidden:TRUE];
 }
-
+- (IBAction)debugCrash:(id)sender {
+    exit(0);
+}
 -(void)resetTimer{
     [secondsTimer invalidate];
     timeElapsed = 0;
     _timerCountSLabel.text = [NSString stringWithFormat:@"00.00"];
     _timerCountMLabel.text = [NSString stringWithFormat:@"00"];
     //self.progressBar.progress = 0;
-    [startWKInterfaceButton setTitle:@"Hold and release to start"];
+    [_startWKInterfaceButton setTitle:@"Hold and release to start"];
 }
 
 @end

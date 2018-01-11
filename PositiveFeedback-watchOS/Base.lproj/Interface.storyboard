@@ -32,9 +32,20 @@
                                 <action selector="startTimer:" destination="AgC-eL-Hgc" id="frY-bG-kJj"/>
                             </connections>
                         </button>
+                        <button width="1" height="104" alignment="left" title="Stop" id="dzq-ri-5ud" userLabel="StopWK Interface Button">
+                            <connections>
+                                <action selector="stopTimer:" destination="AgC-eL-Hgc" id="DvW-Np-9di"/>
+                            </connections>
+                        </button>
+                        <button width="1" height="104" alignment="left" title="Crash!" id="qmA-jX-jhk">
+                            <connections>
+                                <action selector="debugCrash:" destination="AgC-eL-Hgc" id="4Er-GL-bnp"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
-                        <outlet property="startWKInterfaceButton" destination="rVl-1X-ORl" id="gWc-d3-e5d"/>
+                        <outlet property="startWKInterfaceButton" destination="rVl-1X-ORl" id="EiV-C7-jBq"/>
+                        <outlet property="stopWKInterfaceButton" destination="dzq-ri-5ud" id="nRX-Wx-bw4"/>
                         <outlet property="timerCountMLabel" destination="WCl-kD-e11" id="6c8-ES-d6t"/>
                         <outlet property="timerCountSLabel" destination="o1p-dF-D05" id="6Re-Br-YZR"/>
                     </connections>

@@ -14,7 +14,6 @@
     NSTimer *secondsTimer;
     NSDate *startTime;
     NSDate *relativeStartTime;
-    IBOutlet WKInterfaceButton *startWKInterfaceButton;
     NSString *justInvalidated;
     int intervalsPassed;
 }
@@ -24,6 +23,8 @@
 -(IBAction)startTimer:(id)sender;
 @property IBOutlet WKInterfaceLabel *timerCountSLabel;
 @property IBOutlet WKInterfaceLabel *timerCountMLabel;
+@property IBOutlet WKInterfaceButton *stopWKInterfaceButton;
+@property IBOutlet WKInterfaceButton *startWKInterfaceButton;
 @property (strong, nonatomic) NSNumber *goalMinutes;
 @property (strong, nonatomic) NSNumber *goalSeconds;
 @property (strong, nonatomic) NSNumber *runDistance;
