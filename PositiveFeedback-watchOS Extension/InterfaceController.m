@@ -83,9 +83,7 @@
     [_startWKInterfaceButton setHidden:FALSE];
     [_stopWKInterfaceButton setHidden:TRUE];
 }
-- (IBAction)debugCrash:(id)sender {
-    exit(0);
-}
+
 -(void)resetTimer{
     [secondsTimer invalidate];
     timeElapsed = 0;

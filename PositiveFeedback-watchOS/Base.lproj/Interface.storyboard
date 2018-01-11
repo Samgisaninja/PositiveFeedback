@@ -37,11 +37,6 @@
                                 <action selector="stopTimer:" destination="AgC-eL-Hgc" id="DvW-Np-9di"/>
                             </connections>
                         </button>
-                        <button width="1" height="104" alignment="left" title="Crash!" id="qmA-jX-jhk">
-                            <connections>
-                                <action selector="debugCrash:" destination="AgC-eL-Hgc" id="4Er-GL-bnp"/>
-                            </connections>
-                        </button>
                     </items>
                     <connections>
                         <outlet property="startWKInterfaceButton" destination="rVl-1X-ORl" id="EiV-C7-jBq"/>
