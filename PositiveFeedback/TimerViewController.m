@@ -50,13 +50,16 @@
     }
     self.progressBar.progress = timeElapsed / _goalTime;
     if (timeElapsed > _goalTime) {
-        [self resetTimer];
+        [secondsTimer invalidate];
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+        justInvalidated = @"YES";
+        [startUIButton setTitle:@"Hold and release to start" forState:UIControlStateNormal];
     }
     
 }
 -(IBAction)startTimer:(id)sender{
-    if ([justInvalidated isEqualToString:@"YES"]) {
-        justInvalidated = @"NO";
+    if ([justInvalidated isEqualToString:@"NO"]) {
+        justInvalidated = @"YES";
     } else {
         startTime = [NSDate date];
         relativeStartTime = [NSDate date];
@@ -71,7 +74,7 @@
     if ([secondsTimer isValid]) {
         [secondsTimer fire];
         [secondsTimer invalidate];
-        justInvalidated = @"YES";
+        justInvalidated = @"NO";
         [startUIButton setTitle:@"Hold and release to start" forState:UIControlStateNormal];
     } else {
             self.view.backgroundColor = [UIColor greenColor];
