@@ -25,6 +25,7 @@
 @property IBOutlet WKInterfaceLabel *timerCountMLabel;
 @property IBOutlet WKInterfaceButton *stopWKInterfaceButton;
 @property IBOutlet WKInterfaceButton *startWKInterfaceButton;
+@property (strong, nonatomic) IBOutlet WKInterfaceButton *clearWKInterfaceButton;
 @property (strong, nonatomic) NSNumber *goalMinutes;
 @property (strong, nonatomic) NSNumber *goalSeconds;
 @property (strong, nonatomic) NSNumber *runDistance;

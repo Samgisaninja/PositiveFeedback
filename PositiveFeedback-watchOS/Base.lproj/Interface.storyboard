@@ -27,7 +27,7 @@
                                 </label>
                             </items>
                         </group>
-                        <button width="1" height="104" alignment="left" title="Start" id="rVl-1X-ORl">
+                        <button width="1" height="104" alignment="left" title="Hold and release to start" id="rVl-1X-ORl">
                             <connections>
                                 <action selector="startTimer:" destination="AgC-eL-Hgc" id="frY-bG-kJj"/>
                             </connections>
@@ -37,8 +37,14 @@
                                 <action selector="stopTimer:" destination="AgC-eL-Hgc" id="DvW-Np-9di"/>
                             </connections>
                         </button>
+                        <button width="1" height="104" alignment="left" title="Clear" id="ct8-wr-SVL" userLabel="ClearWK Interface Button">
+                            <connections>
+                                <action selector="clearTimer:" destination="AgC-eL-Hgc" id="Vgv-b0-J9c"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
+                        <outlet property="clearWKInterfaceButton" destination="ct8-wr-SVL" id="66L-Fy-Nvz"/>
                         <outlet property="startWKInterfaceButton" destination="rVl-1X-ORl" id="EiV-C7-jBq"/>
                         <outlet property="stopWKInterfaceButton" destination="dzq-ri-5ud" id="nRX-Wx-bw4"/>
                         <outlet property="timerCountMLabel" destination="WCl-kD-e11" id="6c8-ES-d6t"/>

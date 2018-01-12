@@ -21,8 +21,9 @@
     //viewDidntLoad!
     _timerCountMLabel.text = [NSString stringWithFormat:@"00"];
     _timerCountSLabel.text = [NSString stringWithFormat:@"00.00"];
-    [_startWKInterfaceButton setTitle:@"Hold and release to start"];
+    [_startWKInterfaceButton setHidden:FALSE];
     [_stopWKInterfaceButton setHidden:TRUE];
+    [_clearWKInterfaceButton setHidden:TRUE];
     timeElapsed = 0;
     intervalsPassed = 0;
     /* _goalTime = [goalSeconds floatValue] + [goalMinutes floatValue] * 60;
@@ -75,24 +76,31 @@
     [[WKInterfaceDevice currentDevice] playHaptic:WKHapticTypeDirectionDown];
     [_startWKInterfaceButton setHidden:TRUE];
     [_stopWKInterfaceButton setHidden:FALSE];
+    [_clearWKInterfaceButton setHidden:TRUE];
 }
 
 - (IBAction)stopTimer:(id)sender {
         [secondsTimer fire];
         [secondsTimer invalidate];
-        [_startWKInterfaceButton setTitle:@"Hold and release to start"];
     [[WKInterfaceDevice currentDevice] playHaptic:WKHapticTypeStop];
-    [_startWKInterfaceButton setHidden:FALSE];
+    [_startWKInterfaceButton setHidden:TRUE];
     [_stopWKInterfaceButton setHidden:TRUE];
+    [_clearWKInterfaceButton setHidden:FALSE];
 }
-
+- (IBAction)clearTimer:(id)sender {
+    [self resetTimer];
+    [[WKInterfaceDevice currentDevice] playHaptic:WKHapticTypeClick];
+    [_clearWKInterfaceButton setHidden:TRUE];
+    [_stopWKInterfaceButton setHidden:TRUE];
+    [_startWKInterfaceButton setHidden:FALSE];
+    
+}
 -(void)resetTimer{
     [secondsTimer invalidate];
     timeElapsed = 0;
     _timerCountSLabel.text = [NSString stringWithFormat:@"00.00"];
     _timerCountMLabel.text = [NSString stringWithFormat:@"00"];
     //self.progressBar.progress = 0;
-    [_startWKInterfaceButton setTitle:@"Hold and release to start"];
 }
 
 @end
