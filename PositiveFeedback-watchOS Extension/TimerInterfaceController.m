@@ -6,15 +6,15 @@
 //  Copyright © 2018 Sam Gardner. All rights reserved.
 //
 
-#import "InterfaceController.h"
+#import "TimerInterfaceController.h"
 
 
-@interface InterfaceController ()
+@interface TimerInterfaceController ()
 
 @end
 
 
-@implementation InterfaceController
+@implementation TimerInterfaceController
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];

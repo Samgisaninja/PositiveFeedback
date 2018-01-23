@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xzl-NP-PDw">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,56 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
     </dependencies>
     <scenes>
-        <!--InterfaceController-->
+        <!--DistancePickerInterfaceController-->
+        <scene sceneID="hEE-qi-DP9">
+            <objects>
+                <controller identifier="DistancePickerInterfaceController" id="xzl-NP-PDw" customClass="DistancePickerInterfaceController">
+                    <items>
+                        <label alignment="left" text="Distance:" id="Urs-ax-Jg3"/>
+                        <picker height="85" alignment="left" style="stack" id="Itq-lT-AvL">
+                            <connections>
+                                <action selector="distancePickerAction:" destination="xzl-NP-PDw" id="MUs-HO-YMR"/>
+                            </connections>
+                        </picker>
+                        <button width="1" alignment="left" title="Next" id="WgJ-v1-7xq">
+                            <connections>
+                                <segue destination="hyJ-SX-hSE" kind="push" id="TIy-Tr-88x"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="distancePicker" destination="Itq-lT-AvL" id="OgU-lx-DFj"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-354" y="45"/>
+        </scene>
+        <!--TimePickerInterfaceController-->
+        <scene sceneID="WhI-71-GZg">
+            <objects>
+                <controller identifier="TimePickerInterfaceController" id="hyJ-SX-hSE" customClass="TimePickerInterfaceController">
+                    <items>
+                        <group width="1" alignment="left" id="0I4-Aj-a17"/>
+                        <group width="1" alignment="left" id="XUv-fy-YqF">
+                            <items>
+                                <picker width="66" height="84" alignment="left" id="Zzn-ad-dyF"/>
+                                <picker width="66" height="84" alignment="left" id="jpu-GF-TZl"/>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Let's go!" id="FEO-ft-sby">
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="push" id="cVL-B3-ocN"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-106" y="45"/>
+        </scene>
+        <!--TimerInterfaceController-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="InterfaceController" id="AgC-eL-Hgc" customClass="InterfaceController">
+                <controller identifier="TimerInterfaceController" id="AgC-eL-Hgc" customClass="TimerInterfaceController">
                     <items>
                         <group width="1" alignment="left" id="Mrw-qs-4qI">
                             <items>
