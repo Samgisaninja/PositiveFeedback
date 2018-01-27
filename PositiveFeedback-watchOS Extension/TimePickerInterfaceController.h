@@ -10,5 +10,5 @@
 #import <Foundation/Foundation.h>
 
 @interface TimePickerInterfaceController : WKInterfaceController
-
+@property (strong, nonatomic) NSNumber *runDistance;
 @end

@@ -15,14 +15,14 @@
                 <controller identifier="DistancePickerInterfaceController" id="xzl-NP-PDw" customClass="DistancePickerInterfaceController">
                     <items>
                         <label alignment="left" text="Distance:" id="Urs-ax-Jg3"/>
-                        <picker height="85" alignment="left" style="stack" id="Itq-lT-AvL">
+                        <picker height="85" alignment="left" indicatorMode="shownWhileFocused" id="Itq-lT-AvL">
                             <connections>
                                 <action selector="distancePickerAction:" destination="xzl-NP-PDw" id="MUs-HO-YMR"/>
                             </connections>
                         </picker>
                         <button width="1" alignment="left" title="Next" id="WgJ-v1-7xq">
                             <connections>
-                                <segue destination="hyJ-SX-hSE" kind="push" id="TIy-Tr-88x"/>
+                                <segue destination="hyJ-SX-hSE" kind="push" identifier="goalDataShare" id="jec-Mb-gPN"/>
                             </connections>
                         </button>
                     </items>
@@ -38,18 +38,24 @@
             <objects>
                 <controller identifier="TimePickerInterfaceController" id="hyJ-SX-hSE" customClass="TimePickerInterfaceController">
                     <items>
-                        <group width="1" alignment="left" id="0I4-Aj-a17"/>
+                        <group width="1" alignment="left" id="0I4-Aj-a17">
+                            <items>
+                                <label alignment="left" text="Minutes" textAlignment="left" id="fsf-pu-RrH"/>
+                                <separator alignment="left" id="sZ3-72-0KB">
+                                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </separator>
+                                <separator alignment="left" id="2I7-FJ-JU8"/>
+                                <separator alignment="left" id="wr6-px-C3x"/>
+                                <label alignment="left" text="Seconds" textAlignment="right" id="x3c-Zh-1cF"/>
+                            </items>
+                        </group>
                         <group width="1" alignment="left" id="XUv-fy-YqF">
                             <items>
-                                <picker width="66" height="84" alignment="left" id="Zzn-ad-dyF"/>
+                                <picker width="66" height="84" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="Zzn-ad-dyF"/>
                                 <picker width="66" height="84" alignment="left" id="jpu-GF-TZl"/>
                             </items>
                         </group>
-                        <button width="1" alignment="left" title="Let's go!" id="FEO-ft-sby">
-                            <connections>
-                                <segue destination="AgC-eL-Hgc" kind="push" id="cVL-B3-ocN"/>
-                            </connections>
-                        </button>
+                        <button width="1" alignment="left" title="Let's go!" id="FEO-ft-sby"/>
                     </items>
                 </controller>
             </objects>

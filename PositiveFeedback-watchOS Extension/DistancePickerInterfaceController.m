@@ -59,6 +59,7 @@
             break;
     }
     NSLog(@"%ld", (long)value);
+    NSLog(@"Distance: %@", _runDistance);
 }
 
 - (void)willActivate {
@@ -69,6 +70,14 @@
 - (void)didDeactivate {
     // This method is called when watch view controller is no longer visible
     [super didDeactivate];
+}
+
+-(id)contextForSegueWithIdentifier:(NSString *)segueIdentifier{
+    if ([segueIdentifier isEqualToString:@"goalDataShare"]){
+        return _runDistance;
+    } else {
+        return nil;
+    }
 }
 
 @end
