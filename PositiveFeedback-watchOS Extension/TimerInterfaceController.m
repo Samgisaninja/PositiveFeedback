@@ -26,6 +26,9 @@
     [_clearWKInterfaceButton setHidden:TRUE];
     timeElapsed = 0;
     intervalsPassed = 0;
+    _runDistance = [context objectForKey:@"runDistance"];
+    _goalMinutes = [context objectForKey:@"goalMinutes"];
+    _goalSeconds = [context objectForKey:@"goalSeconds"];
     /* _goalTime = [goalSeconds floatValue] + [goalMinutes floatValue] * 60;
     _goalInterval = _goalTime / [runDistance floatValue];
     self.progressBar.progress = 0; */

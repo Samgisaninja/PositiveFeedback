@@ -22,12 +22,12 @@
                         </picker>
                         <button width="1" alignment="left" title="Next" id="WgJ-v1-7xq">
                             <connections>
-                                <segue destination="hyJ-SX-hSE" kind="push" identifier="goalDataShare" id="jec-Mb-gPN"/>
+                                <action selector="nextButton" destination="xzl-NP-PDw" id="xEp-Ua-ufM"/>
                             </connections>
                         </button>
                     </items>
                     <connections>
-                        <outlet property="distancePicker" destination="Itq-lT-AvL" id="OgU-lx-DFj"/>
+                        <outlet property="distancePicker" destination="Itq-lT-AvL" id="FY3-Ka-Pp2"/>
                     </connections>
                 </controller>
             </objects>
@@ -44,19 +44,39 @@
                                 <separator alignment="left" id="sZ3-72-0KB">
                                     <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </separator>
-                                <separator alignment="left" id="2I7-FJ-JU8"/>
-                                <separator alignment="left" id="wr6-px-C3x"/>
+                                <separator alignment="left" id="IOw-i9-u2D">
+                                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </separator>
+                                <separator alignment="left" id="yYa-zo-uuL">
+                                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </separator>
                                 <label alignment="left" text="Seconds" textAlignment="right" id="x3c-Zh-1cF"/>
                             </items>
                         </group>
                         <group width="1" alignment="left" id="XUv-fy-YqF">
                             <items>
-                                <picker width="66" height="84" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="Zzn-ad-dyF"/>
-                                <picker width="66" height="84" alignment="left" id="jpu-GF-TZl"/>
+                                <picker width="66" height="84" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="Zzn-ad-dyF">
+                                    <connections>
+                                        <action selector="minutesPickerAction:" destination="hyJ-SX-hSE" id="XKa-it-dXf"/>
+                                    </connections>
+                                </picker>
+                                <picker width="66" height="84" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="jpu-GF-TZl">
+                                    <connections>
+                                        <action selector="secondsPickerAction:" destination="hyJ-SX-hSE" id="TPl-th-0he"/>
+                                    </connections>
+                                </picker>
                             </items>
                         </group>
-                        <button width="1" alignment="left" title="Let's go!" id="FEO-ft-sby"/>
+                        <button width="1" alignment="left" title="Let's go!" id="FEO-ft-sby">
+                            <connections>
+                                <action selector="nextButton" destination="hyJ-SX-hSE" id="lZL-d3-fir"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="minutesPicker" destination="Zzn-ad-dyF" id="Ykj-yO-fTr"/>
+                        <outlet property="secondsPicker" destination="jpu-GF-TZl" id="bw0-SS-PEk"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-106" y="45"/>
