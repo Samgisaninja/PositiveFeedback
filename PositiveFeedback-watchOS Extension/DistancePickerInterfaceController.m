@@ -9,8 +9,7 @@
 #import "DistancePickerInterfaceController.h"
 
 @interface DistancePickerInterfaceController ()
-@property (strong, nonatomic) IBOutlet WKInterfacePicker *distancePicker;
-@property (strong, nonatomic) NSArray *distancePickerItems;
+
 
 @end
 
@@ -57,9 +56,7 @@
             _runDistance = @(5.0);
         default:
             break;
-    }
-    NSLog(@"%ld", (long)value);
-    NSLog(@"Distance: %@", _runDistance);
+     }
 }
 
 - (void)willActivate {
@@ -72,13 +69,11 @@
     [super didDeactivate];
 }
 
--(id)contextForSegueWithIdentifier:(NSString *)segueIdentifier{
-    if ([segueIdentifier isEqualToString:@"goalDataShare"]){
-        return _runDistance;
-    } else {
-        return nil;
-    }
+- (IBAction)nextButton {
+    NSDictionary * goalDataShare = @{@"runDistance" : _runDistance};
+    [self pushControllerWithName:@"TimePickerInterfaceController" context:goalDataShare];
 }
+
 
 @end
 

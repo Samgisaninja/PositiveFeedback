@@ -11,4 +11,6 @@
 
 @interface DistancePickerInterfaceController : WKInterfaceController
 @property (strong, nonatomic) NSNumber *runDistance;
+@property (strong, nonatomic) IBOutlet WKInterfacePicker *distancePicker;
+@property (strong, nonatomic) NSArray *distancePickerItems;
 @end
