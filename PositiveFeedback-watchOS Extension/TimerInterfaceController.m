@@ -29,9 +29,9 @@
     _runDistance = [context objectForKey:@"runDistance"];
     _goalMinutes = [context objectForKey:@"goalMinutes"];
     _goalSeconds = [context objectForKey:@"goalSeconds"];
-    /* _goalTime = [goalSeconds floatValue] + [goalMinutes floatValue] * 60;
-    _goalInterval = _goalTime / [runDistance floatValue];
-    self.progressBar.progress = 0; */
+    _goalTime = [_goalSeconds floatValue] + [_goalMinutes floatValue] * 60;
+    _goalInterval = _goalTime / [_runDistance floatValue];
+    // self.progressBar.progress = 0;
     
 }
 
@@ -59,17 +59,16 @@
     } else {
         _timerCountMLabel.text = [NSString stringWithFormat:@"%.1d",minutesElapsed];
     }
-    /* float progressToInterval = currentUnixTime - [relativeStartTime timeIntervalSince1970];
+    float progressToInterval = currentUnixTime - [relativeStartTime timeIntervalSince1970];
     if (progressToInterval > _goalInterval) {
         relativeStartTime = [NSDate date];
         intervalsPassed = intervalsPassed + 1;
-        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+        NSLog(@"HAPTIC FEEDBACK HERE!!!");
     }
-    self.progressBar.progress = timeElapsed / _goalTime;
+    /* self.progressBar.progress = timeElapsed / _goalTime;
     if (timeElapsed > _goalTime) {
         [self resetTimer];
-    }
-    */
+    } */
 }
 -(IBAction)startTimer:(id)sender{
     startTime = [NSDate date];
@@ -103,7 +102,7 @@
     timeElapsed = 0;
     _timerCountSLabel.text = [NSString stringWithFormat:@"00.00"];
     _timerCountMLabel.text = [NSString stringWithFormat:@"00"];
-    //self.progressBar.progress = 0;
+    // self.progressBar.progress = 0;
 }
 
 @end
