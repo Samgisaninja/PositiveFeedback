@@ -30,17 +30,18 @@
 -(void)update{
     NSTimeInterval currentUnixTime = [[NSDate date] timeIntervalSince1970];
     NSTimeInterval timeElapsed = currentUnixTime - [startTime timeIntervalSince1970];
-    int minutesElapsed = (int) timeElapsed / 60;
-    timeElapsed -= minutesElapsed * 60;
-    if (timeElapsed < 10) {
-        timerCountSLabel.text = [NSString stringWithFormat:@"0%.2f",timeElapsed];
+    NSInteger timeElapsedInteger = timeElapsed;
+    NSInteger minutesElapsed = (timeElapsedInteger / 60) % 60;
+    NSTimeInterval secondsElapsed = timeElapsed - 60 * minutesElapsed;
+    if (secondsElapsed < 10) {
+        timerCountSLabel.text = [NSString stringWithFormat:@"0%.2f",secondsElapsed];
     } else {
-        timerCountSLabel.text = [NSString stringWithFormat:@"%.2f",timeElapsed];
+        timerCountSLabel.text = [NSString stringWithFormat:@"%.2f",secondsElapsed];
     }
     if (minutesElapsed < 10) {
-        timerCountMLabel.text = [NSString stringWithFormat:@"0%.1d",minutesElapsed];
+        timerCountMLabel.text = [NSString stringWithFormat:@"0%.1ld",(long)minutesElapsed];
     } else {
-        timerCountMLabel.text = [NSString stringWithFormat:@"%.1d",minutesElapsed];
+        timerCountMLabel.text = [NSString stringWithFormat:@"%.1ld",(long)minutesElapsed];
     }
     float progressToInterval = currentUnixTime - [relativeStartTime timeIntervalSince1970];
     if (progressToInterval > _goalInterval) {
@@ -55,7 +56,6 @@
         justInvalidated = @"YES";
         [startUIButton setTitle:@"Hold and release to start" forState:UIControlStateNormal];
     }
-    
 }
 -(IBAction)startTimer:(id)sender{
     if ([justInvalidated isEqualToString:@"NO"]) {

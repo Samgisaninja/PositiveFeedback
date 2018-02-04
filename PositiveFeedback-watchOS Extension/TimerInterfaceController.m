@@ -29,6 +29,9 @@
     _runDistance = [context objectForKey:@"runDistance"];
     _goalMinutes = [context objectForKey:@"goalMinutes"];
     _goalSeconds = [context objectForKey:@"goalSeconds"];
+    NSLog(@"runDistance: %@", _runDistance);
+    NSLog(@"goalMinutes: %@", _goalMinutes);
+    NSLog(@"goalSeconds: %@", _goalSeconds);
     _goalTime = [_goalSeconds floatValue] + [_goalMinutes floatValue] * 60;
     _goalInterval = _goalTime / [_runDistance floatValue];
     // self.progressBar.progress = 0;
@@ -47,28 +50,34 @@
 -(void)update{
     NSTimeInterval currentUnixTime = [[NSDate date] timeIntervalSince1970];
     NSTimeInterval timeElapsed = currentUnixTime - [startTime timeIntervalSince1970];
-    int minutesElapsed = (int) timeElapsed / 60;
-    timeElapsed -= minutesElapsed * 60;
-    if (timeElapsed < 10) {
-        _timerCountSLabel.text = [NSString stringWithFormat:@"0%.2f",timeElapsed];
+    NSInteger timeElapsedInteger = timeElapsed;
+    NSInteger minutesElapsed = (timeElapsedInteger / 60) % 60;
+    NSTimeInterval secondsElapsed = timeElapsed - 60 * minutesElapsed;
+    if (secondsElapsed < 10) {
+        _timerCountSLabel.text = [NSString stringWithFormat:@"0%.2f",secondsElapsed];
     } else {
-        _timerCountSLabel.text = [NSString stringWithFormat:@"%.2f",timeElapsed];
+        _timerCountSLabel.text = [NSString stringWithFormat:@"%.2f",secondsElapsed];
     }
     if (minutesElapsed < 10) {
-        _timerCountMLabel.text = [NSString stringWithFormat:@"0%.1d",minutesElapsed];
+        _timerCountMLabel.text = [NSString stringWithFormat:@"0%.1ld",(long)minutesElapsed];
     } else {
-        _timerCountMLabel.text = [NSString stringWithFormat:@"%.1d",minutesElapsed];
+        _timerCountMLabel.text = [NSString stringWithFormat:@"%.1ld",(long)minutesElapsed];
     }
     float progressToInterval = currentUnixTime - [relativeStartTime timeIntervalSince1970];
     if (progressToInterval > _goalInterval) {
         relativeStartTime = [NSDate date];
         intervalsPassed = intervalsPassed + 1;
-        NSLog(@"HAPTIC FEEDBACK HERE!!!");
+        [[WKInterfaceDevice currentDevice] playHaptic:WKHapticTypeStart];
     }
-    /* self.progressBar.progress = timeElapsed / _goalTime;
+    // self.progressBar.progress = timeElapsed / _goalTime;
     if (timeElapsed > _goalTime) {
-        [self resetTimer];
-    } */
+        [secondsTimer fire];
+        [secondsTimer invalidate];
+        [[WKInterfaceDevice currentDevice] playHaptic:WKHapticTypeStop];
+        [_startWKInterfaceButton setHidden:TRUE];
+        [_stopWKInterfaceButton setHidden:TRUE];
+        [_clearWKInterfaceButton setHidden:FALSE];
+    }
 }
 -(IBAction)startTimer:(id)sender{
     startTime = [NSDate date];
@@ -82,8 +91,8 @@
 }
 
 - (IBAction)stopTimer:(id)sender {
-        [secondsTimer fire];
-        [secondsTimer invalidate];
+    [secondsTimer fire];
+    [secondsTimer invalidate];
     [[WKInterfaceDevice currentDevice] playHaptic:WKHapticTypeStop];
     [_startWKInterfaceButton setHidden:TRUE];
     [_stopWKInterfaceButton setHidden:TRUE];
