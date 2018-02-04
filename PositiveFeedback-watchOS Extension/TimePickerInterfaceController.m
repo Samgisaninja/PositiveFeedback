@@ -19,6 +19,8 @@
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     _runDistance = [context objectForKey:@"runDistance"];
+    _goalMinutes = 0;
+    _goalSeconds = 0;
     //Guess who's too lazy to learn for statements?
     WKPickerItem * zeroItem = [[WKPickerItem alloc] init];
     [zeroItem setTitle:@"00"];
