@@ -67,7 +67,7 @@
     if (progressToInterval > _goalInterval) {
         relativeStartTime = [NSDate date];
         intervalsPassed = intervalsPassed + 1;
-        [[WKInterfaceDevice currentDevice] playHaptic:WKHapticTypeStart];
+        [[WKInterfaceDevice currentDevice] playHaptic:WKHapticTypeFailure];
     }
     // self.progressBar.progress = timeElapsed / _goalTime;
     if (timeElapsed > _goalTime) {
