@@ -71,7 +71,6 @@
     }
     // self.progressBar.progress = timeElapsed / _goalTime;
     if (timeElapsed > _goalTime) {
-        [secondsTimer fire];
         [secondsTimer invalidate];
         [[WKInterfaceDevice currentDevice] playHaptic:WKHapticTypeStop];
         [_startWKInterfaceButton setHidden:TRUE];
