@@ -29,9 +29,6 @@
     _runDistance = [context objectForKey:@"runDistance"];
     _goalMinutes = [context objectForKey:@"goalMinutes"];
     _goalSeconds = [context objectForKey:@"goalSeconds"];
-    NSLog(@"runDistance: %@", _runDistance);
-    NSLog(@"goalMinutes: %@", _goalMinutes);
-    NSLog(@"goalSeconds: %@", _goalSeconds);
     _goalTime = [_goalSeconds floatValue] + [_goalMinutes floatValue] * 60;
     _goalInterval = _goalTime / [_runDistance floatValue];
     // self.progressBar.progress = 0;
@@ -44,7 +41,6 @@
 }
 
 - (void)didDeactivate {
-    // This method is called when watch view controller is no longer visible
 }
 
 -(void)update{
