@@ -24,7 +24,6 @@
     [_startWKInterfaceButton setHidden:FALSE];
     [_stopWKInterfaceButton setHidden:TRUE];
     [_clearWKInterfaceButton setHidden:TRUE];
-    //[_startWKInterfaceButton setBackgroundImageNamed:@"ProgressToGoal-0.png"];
     timeElapsed = 0;
     intervalsPassed = 0;
     _runDistance = [context objectForKey:@"runDistance"];
