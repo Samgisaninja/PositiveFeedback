@@ -82,51 +82,51 @@
             <point key="canvasLocation" x="-106" y="45"/>
         </scene>
         <!--TimerInterfaceController-->
-        <scene sceneID="aou-V4-d1y">
+        <scene sceneID="gDW-uc-5Z6">
             <objects>
-                <controller identifier="TimerInterfaceController" id="AgC-eL-Hgc" customClass="TimerInterfaceController">
+                <controller identifier="TimerInterfaceController" fullScreen="YES" id="dgo-1B-wLR" customClass="TimerInterfaceController">
                     <items>
-                        <group width="1" alignment="left" id="Mrw-qs-4qI">
+                        <group width="1" alignment="left" id="zFi-WG-4el">
                             <items>
-                                <label alignment="left" text="99" id="WCl-kD-e11">
+                                <label alignment="left" text="99" id="NJH-rD-Qu9">
                                     <fontDescription key="font" type="system" pointSize="35"/>
                                 </label>
-                                <label alignment="left" text=":" id="2Fc-Ol-dzF">
+                                <label alignment="left" text=":" id="l3p-kV-CZI">
                                     <fontDescription key="font" type="system" pointSize="35"/>
                                 </label>
-                                <label alignment="left" text="04.90" id="o1p-dF-D05">
+                                <label alignment="left" text="04.90" id="yrG-cw-7IY">
                                     <fontDescription key="font" type="system" pointSize="35"/>
                                 </label>
                             </items>
                         </group>
-                        <picker width="64" height="64" alignment="center" id="XXc-sa-tsy"/>
-                        <button width="136" height="104" alignment="center" title="Hold and release to start" id="rVl-1X-ORl">
+                        <picker width="64" height="64" alignment="center" id="hMm-Rx-bvl"/>
+                        <button width="136" height="124" alignment="center" title="Hold and release to start" id="4h3-V8-DR6">
                             <fontDescription key="font" type="system" pointSize="14"/>
                             <connections>
-                                <action selector="startTimer:" destination="AgC-eL-Hgc" id="frY-bG-kJj"/>
+                                <action selector="startTimer:" destination="dgo-1B-wLR" id="0tP-fy-Q2U"/>
                             </connections>
                         </button>
-                        <button width="136" height="37" alignment="center" verticalAlignment="center" title="Stop" id="dzq-ri-5ud" userLabel="StopWK Interface Button">
+                        <button width="136" height="37" alignment="center" verticalAlignment="center" title="Stop" id="nTb-jP-eLg" userLabel="StopWK Interface Button">
                             <connections>
-                                <action selector="stopTimer:" destination="AgC-eL-Hgc" id="DvW-Np-9di"/>
+                                <action selector="stopTimer:" destination="dgo-1B-wLR" id="nNz-gZ-QZb"/>
                             </connections>
                         </button>
-                        <button width="136" height="37" alignment="center" verticalAlignment="bottom" title="Clear" id="ct8-wr-SVL" userLabel="ClearWK Interface Button">
+                        <button width="136" height="37" alignment="center" verticalAlignment="bottom" title="Clear" id="ZIr-Oc-J5F" userLabel="ClearWK Interface Button">
                             <connections>
-                                <action selector="clearTimer:" destination="AgC-eL-Hgc" id="Vgv-b0-J9c"/>
+                                <action selector="clearTimer:" destination="dgo-1B-wLR" id="h0Y-nX-6MI"/>
                             </connections>
                         </button>
                     </items>
                     <connections>
-                        <outlet property="clearWKInterfaceButton" destination="ct8-wr-SVL" id="66L-Fy-Nvz"/>
-                        <outlet property="startWKInterfaceButton" destination="rVl-1X-ORl" id="EiV-C7-jBq"/>
-                        <outlet property="stopWKInterfaceButton" destination="dzq-ri-5ud" id="nRX-Wx-bw4"/>
-                        <outlet property="timerCountMLabel" destination="WCl-kD-e11" id="6c8-ES-d6t"/>
-                        <outlet property="timerCountSLabel" destination="o1p-dF-D05" id="6Re-Br-YZR"/>
+                        <outlet property="clearWKInterfaceButton" destination="ZIr-Oc-J5F" id="WyZ-xY-5wT"/>
+                        <outlet property="startWKInterfaceButton" destination="4h3-V8-DR6" id="MVM-dz-OUx"/>
+                        <outlet property="stopWKInterfaceButton" destination="nTb-jP-eLg" id="IHN-hq-Q2f"/>
+                        <outlet property="timerCountMLabel" destination="NJH-rD-Qu9" id="elr-vP-PMg"/>
+                        <outlet property="timerCountSLabel" destination="yrG-cw-7IY" id="Y2u-bC-g2O"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="144" y="120"/>
+            <point key="canvasLocation" x="129" y="120"/>
         </scene>
     </scenes>
 </document>
