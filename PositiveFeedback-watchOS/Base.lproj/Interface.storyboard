@@ -100,6 +100,7 @@
                             </items>
                         </group>
                         <button width="1" height="104" alignment="left" title="Hold and release to start" id="rVl-1X-ORl">
+                            <fontDescription key="font" type="system" pointSize="14"/>
                             <connections>
                                 <action selector="startTimer:" destination="AgC-eL-Hgc" id="frY-bG-kJj"/>
                             </connections>
