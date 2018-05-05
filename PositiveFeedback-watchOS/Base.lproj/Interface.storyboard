@@ -99,8 +99,8 @@
                                 </label>
                             </items>
                         </group>
-                        <picker width="64" height="64" alignment="center" id="hMm-Rx-bvl"/>
-                        <button width="136" height="124" alignment="center" title="Hold and release to start" id="4h3-V8-DR6">
+                        <picker width="64" height="64" alignment="center" style="sequence" enabled="NO" id="hMm-Rx-bvl"/>
+                        <button width="136" height="120" alignment="center" title="Hold and release to start" id="4h3-V8-DR6">
                             <fontDescription key="font" type="system" pointSize="14"/>
                             <connections>
                                 <action selector="startTimer:" destination="dgo-1B-wLR" id="0tP-fy-Q2U"/>
@@ -119,6 +119,7 @@
                     </items>
                     <connections>
                         <outlet property="clearWKInterfaceButton" destination="ZIr-Oc-J5F" id="WyZ-xY-5wT"/>
+                        <outlet property="progressBarPicker" destination="hMm-Rx-bvl" id="fv1-m1-AlD"/>
                         <outlet property="startWKInterfaceButton" destination="4h3-V8-DR6" id="MVM-dz-OUx"/>
                         <outlet property="stopWKInterfaceButton" destination="nTb-jP-eLg" id="IHN-hq-Q2f"/>
                         <outlet property="timerCountMLabel" destination="NJH-rD-Qu9" id="elr-vP-PMg"/>

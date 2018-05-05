@@ -19,7 +19,8 @@
 }
 -(void)update;
 -(void)resetTimer;
-// @property (strong, nonatomic) IBOutlet UIProgressView *progressBar;
+-(void)prepareAnimation;
+@property IBOutlet WKInterfacePicker *progressBarPicker;
 -(IBAction)startTimer:(id)sender;
 @property IBOutlet WKInterfaceLabel *timerCountSLabel;
 @property IBOutlet WKInterfaceLabel *timerCountMLabel;
