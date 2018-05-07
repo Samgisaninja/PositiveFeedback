@@ -22,6 +22,8 @@
     _goalMinutes = 0;
     _goalSeconds = 0;
     //Guess who's too lazy to learn for statements?
+    WKPickerItem *nullPickerItem = [[WKPickerItem alloc] init];
+    [nullPickerItem setTitle:@" "];
     WKPickerItem * zeroItem = [[WKPickerItem alloc] init];
     [zeroItem setTitle:@"00"];
     WKPickerItem * oneItem = [[WKPickerItem alloc] init];
@@ -142,18 +144,21 @@
     [fiftyEightItem setTitle:@"58"];
     WKPickerItem * fiftyNineItem = [[WKPickerItem alloc] init];
     [fiftyNineItem setTitle:@"59"];
-    _secondsPickerItems = [[NSArray alloc] initWithObjects:zeroItem, oneItem, twoItem, threeItem, fourItem, fiveItem, sixItem, sevenItem, eightItem, nineItem, tenItem, elevenItem, twelveItem, thirteenItem, fourteenItem, fifteenItem, sixteenItem, seventeenItem, eighteenItem, nineteenItem, twentyItem, twentyOneItem, twentyTwoItem, twentyTwoItem, twentyThreeItem, twentyFourItem, twentyFiveItem, twentySixItem, twentySevenItem, twentyEightItem, twentyNineItem, thirtyItem, thirtyOneItem, thirtyTwoItem, thirtyThreeItem, thirtyFourItem, thirtyFiveItem, thirtySixItem, thirtySevenItem, thirtyEightItem, thirtyNineItem, fortyItem, fortyOneItem, fortyTwoItem, fortyThreeItem, fortyFourItem, fortyFiveItem, fortySixItem, fortySevenItem, fortyEightItem, fortyNineItem, fiftyItem, fiftyOneItem, fiftyTwoItem, fiftyThreeItem, fiftyFourItem, fiftyFiveItem, fiftySixItem, fiftySevenItem, fiftyEightItem, fiftyNineItem, nil];
+    _secondsPickerItems = [[NSArray alloc] initWithObjects:nullPickerItem, zeroItem, oneItem, twoItem, threeItem, fourItem, fiveItem, sixItem, sevenItem, eightItem, nineItem, tenItem, elevenItem, twelveItem, thirteenItem, fourteenItem, fifteenItem, sixteenItem, seventeenItem, eighteenItem, nineteenItem, twentyItem, twentyOneItem, twentyTwoItem, twentyTwoItem, twentyThreeItem, twentyFourItem, twentyFiveItem, twentySixItem, twentySevenItem, twentyEightItem, twentyNineItem, thirtyItem, thirtyOneItem, thirtyTwoItem, thirtyThreeItem, thirtyFourItem, thirtyFiveItem, thirtySixItem, thirtySevenItem, thirtyEightItem, thirtyNineItem, fortyItem, fortyOneItem, fortyTwoItem, fortyThreeItem, fortyFourItem, fortyFiveItem, fortySixItem, fortySevenItem, fortyEightItem, fortyNineItem, fiftyItem, fiftyOneItem, fiftyTwoItem, fiftyThreeItem, fiftyFourItem, fiftyFiveItem, fiftySixItem, fiftySevenItem, fiftyEightItem, fiftyNineItem, nil];
     [self.secondsPicker setItems:_secondsPickerItems];
-    _minutesPickerItems = [[NSArray alloc] initWithObjects:zeroItem, oneItem, twoItem, threeItem, fourItem, fiveItem, sixItem, sevenItem, eightItem, nineItem, tenItem, elevenItem, twelveItem, thirteenItem, fourteenItem, fifteenItem, sixteenItem, seventeenItem, eighteenItem, nineteenItem, twentyItem, twentyOneItem, twentyTwoItem, twentyTwoItem, twentyThreeItem, twentyFourItem, twentyFiveItem, twentySixItem, twentySevenItem, twentyEightItem, twentyNineItem, thirtyItem, nil];
+    _minutesPickerItems = [[NSArray alloc] initWithObjects:nullPickerItem, zeroItem, oneItem, twoItem, threeItem, fourItem, fiveItem, sixItem, sevenItem, eightItem, nineItem, tenItem, elevenItem, twelveItem, thirteenItem, fourteenItem, fifteenItem, sixteenItem, seventeenItem, eighteenItem, nineteenItem, twentyItem, twentyOneItem, twentyTwoItem, twentyTwoItem, twentyThreeItem, twentyFourItem, twentyFiveItem, twentySixItem, twentySevenItem, twentyEightItem, twentyNineItem, thirtyItem, nil];
     [self.minutesPicker setItems:_minutesPickerItems];
-    NSLog(@"%@", _minutesPickerItems);
+    [_secondsPicker setSelectedItemIndex:0];
+    [_minutesPicker setSelectedItemIndex:0];
     //Sorry.
 }
 
 - (IBAction)minutesPickerAction:(NSInteger)value {
+    value = value - 1;
     _goalMinutes = [NSNumber numberWithInteger:value];
 }
 - (IBAction)secondsPickerAction:(NSInteger)value {
+    value = value - 1;
     _goalSeconds = [NSNumber numberWithInteger:value];
 }
 
