@@ -117,37 +117,39 @@
 }
 -(void)prepareAnimation{
     WKPickerItem *zeroPickerItem = [[WKPickerItem alloc] init];
-    zeroPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"0.png"]];
+    //zeroPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"0.png"]];
     WKPickerItem *onePickerItem = [[WKPickerItem alloc] init];
-    onePickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"1.png"]];
+    //onePickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"1.png"]];
     WKPickerItem *twoPickerItem = [[WKPickerItem alloc] init];
-    twoPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"2.png"]];
+    //twoPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"2.png"]];
     WKPickerItem *threePickerItem = [[WKPickerItem alloc] init];
-    threePickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"3.png"]];
-    /*WKPickerItem *fourPickerItem = [[WKPickerItem alloc] init];
-    fourPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"4.png"]];
+    //threePickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"3.png"]];
+    WKPickerItem *fourPickerItem = [[WKPickerItem alloc] init];
+    //fourPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"4.png"]];
     WKPickerItem *fivePickerItem = [[WKPickerItem alloc] init];
-    fivePickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"5.png"]];
+    //fivePickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"5.png"]];
     WKPickerItem *sixPickerItem = [[WKPickerItem alloc] init];
-    sixPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"6.png"]];
+    //sixPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"6.png"]];
     WKPickerItem *sevenPickerItem = [[WKPickerItem alloc] init];
-    sevenPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"7.png"]];
+    //sevenPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"7.png"]];
     WKPickerItem *eightPickerItem = [[WKPickerItem alloc] init];
-    eightPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"8.png"]];
+    //eightPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"8.png"]];
     WKPickerItem *ninePickerItem = [[WKPickerItem alloc] init];
-    ninePickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"9.png"]];
+    //ninePickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"9.png"]];
     WKPickerItem *tenPickerItem = [[WKPickerItem alloc] init];
-    tenPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"10.png"]];
+    //tenPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"10.png"]];
     WKPickerItem *elevenPickerItem = [[WKPickerItem alloc] init];
-    elevenPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"11.png"]];
+    //elevenPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"11.png"]];
     WKPickerItem *twelvePickerItem = [[WKPickerItem alloc] init];
-    twelvePickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"12.png"]];
+    //twelvePickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"12.png"]];
     WKPickerItem *thirteenPickerItem = [[WKPickerItem alloc] init];
-    thirteenPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"13.png"]];
+    //thirteenPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"13.png"]];
     WKPickerItem *fourteenPickerItem = [[WKPickerItem alloc] init];
-    fourteenPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"14.png"]];
+    //fourteenPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"14.png"]];
     WKPickerItem *fifteenPickerItem = [[WKPickerItem alloc] init];
+    //fifteenPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"15"]];
     WKPickerItem *sixteenPickerItem = [[WKPickerItem alloc] init];
+    //sixteenPickerItem.contentImage = [WKImage imageWithImage:[UIImage imageNamed:@"16.png"]];
     WKPickerItem *seventeenPickerItem = [[WKPickerItem alloc] init];
     WKPickerItem *eighteenPickerItem = [[WKPickerItem alloc] init];
     WKPickerItem *nineteenPickerItem = [[WKPickerItem alloc] init];
@@ -171,8 +173,12 @@
     WKPickerItem *thirtySevenPickerItem = [[WKPickerItem alloc] init];
     WKPickerItem *thirtyEightPickerItem = [[WKPickerItem alloc] init];
     WKPickerItem *thirtyNinePickerItem = [[WKPickerItem alloc] init];
-    WKPickerItem *fortyPickerItem = [[WKPickerItem alloc] init];*/
-    NSArray *pickerItems = [[NSArray alloc] initWithObjects:zeroPickerItem, onePickerItem, twoPickerItem, threePickerItem,/* fourPickerItem, fivePickerItem, sixPickerItem, sevenPickerItem, eightPickerItem, ninePickerItem, tenPickerItem, elevenPickerItem, twelvePickerItem, thirteenPickerItem, fourteenPickerItem, fifteenPickerItem, sixteenPickerItem, seventeenPickerItem, eighteenPickerItem, nineteenPickerItem, twentyPickerItem, twentyOnePickerItem, twentyTwoPickerItem, twentyThreePickerItem, twentyFourPickerItem, twentyFivePickerItem, twentySixPickerItem, twentySevenPickerItem, twentyEightPickerItem, twentyNinePickerItem, thirtyPickerItem, thirtyOnePickerItem, thirtyTwoPickerItem, thirtyThreePickerItem, thirtyFourPickerItem, thirtyFourPickerItem, thirtyFivePickerItem, thirtySixPickerItem, thirtySevenPickerItem, thirtyEightPickerItem, thirtyNinePickerItem, fortyPickerItem,*/ nil];
+    WKPickerItem *fortyPickerItem = [[WKPickerItem alloc] init];
+    NSArray *pickerItems = [[NSArray alloc] initWithObjects:zeroPickerItem, onePickerItem, twoPickerItem, threePickerItem, fourPickerItem, fivePickerItem, sixPickerItem, sevenPickerItem, eightPickerItem, ninePickerItem, tenPickerItem, elevenPickerItem, twelvePickerItem, thirteenPickerItem, fourteenPickerItem, fifteenPickerItem, sixteenPickerItem, seventeenPickerItem, eighteenPickerItem, nineteenPickerItem, twentyPickerItem, twentyOnePickerItem, twentyTwoPickerItem, twentyThreePickerItem, twentyFourPickerItem, twentyFivePickerItem, twentySixPickerItem, twentySevenPickerItem, twentyEightPickerItem, twentyNinePickerItem, thirtyPickerItem, thirtyOnePickerItem, thirtyTwoPickerItem, thirtyThreePickerItem, thirtyFourPickerItem, thirtyFourPickerItem, thirtyFivePickerItem, thirtySixPickerItem, thirtySevenPickerItem, thirtyEightPickerItem, thirtyNinePickerItem, fortyPickerItem, nil];
+    for (int i=0; i<=40; i++) {
+        [[pickerItems objectAtIndex:i] setContentImage:[WKImage imageWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"%d.png", i]]]];
+        NSLog(@"%d", i);
+    }
     [self.progressBarPicker setItems:pickerItems];
 }
 @end
