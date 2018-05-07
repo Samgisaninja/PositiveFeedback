@@ -55,12 +55,12 @@
                         </group>
                         <group width="1" alignment="left" id="XUv-fy-YqF">
                             <items>
-                                <picker width="66" height="84" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="Zzn-ad-dyF">
+                                <picker width="66" height="105" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="Zzn-ad-dyF">
                                     <connections>
                                         <action selector="minutesPickerAction:" destination="hyJ-SX-hSE" id="XKa-it-dXf"/>
                                     </connections>
                                 </picker>
-                                <picker width="66" height="84" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="jpu-GF-TZl">
+                                <picker width="66" height="105" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="jpu-GF-TZl">
                                     <connections>
                                         <action selector="secondsPickerAction:" destination="hyJ-SX-hSE" id="TPl-th-0he"/>
                                     </connections>
@@ -84,7 +84,7 @@
         <!--TimerInterfaceController-->
         <scene sceneID="gDW-uc-5Z6">
             <objects>
-                <controller identifier="TimerInterfaceController" fullScreen="YES" id="dgo-1B-wLR" customClass="TimerInterfaceController">
+                <controller identifier="TimerInterfaceController" id="dgo-1B-wLR" customClass="TimerInterfaceController">
                     <items>
                         <group width="1" alignment="left" id="zFi-WG-4el">
                             <items>
@@ -106,12 +106,12 @@
                                 <action selector="startTimer:" destination="dgo-1B-wLR" id="0tP-fy-Q2U"/>
                             </connections>
                         </button>
-                        <button width="136" height="37" alignment="center" verticalAlignment="bottom" title="Stop" id="nTb-jP-eLg" userLabel="StopWK Interface Button">
+                        <button width="136" height="37" alignment="center" verticalAlignment="center" title="Stop" id="nTb-jP-eLg" userLabel="StopWK Interface Button">
                             <connections>
                                 <action selector="stopTimer:" destination="dgo-1B-wLR" id="nNz-gZ-QZb"/>
                             </connections>
                         </button>
-                        <button width="136" height="37" alignment="center" verticalAlignment="bottom" title="Clear" id="ZIr-Oc-J5F" userLabel="ClearWK Interface Button">
+                        <button width="136" height="37" alignment="center" verticalAlignment="center" title="Clear" id="ZIr-Oc-J5F" userLabel="ClearWK Interface Button">
                             <connections>
                                 <action selector="clearTimer:" destination="dgo-1B-wLR" id="h0Y-nX-6MI"/>
                             </connections>
