@@ -8,6 +8,8 @@
 
 #import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
+#import <HealthKit/HKWorkoutSession.h>
+#import <HealthKit/HKHealthStore.h>
 
 @interface TimerInterfaceController : WKInterfaceController{
     NSTimeInterval *timeElapsed;
@@ -30,6 +32,8 @@
 @property (strong, nonatomic) NSNumber *goalMinutes;
 @property (strong, nonatomic) NSNumber *goalSeconds;
 @property (strong, nonatomic) NSNumber *runDistance;
+@property (strong, nonatomic) HKWorkoutSession *runningWorkout;
+@property (strong, nonatomic) HKHealthStore *healthStore;
 @property float goalTime;
 @property float goalInterval;
 @end

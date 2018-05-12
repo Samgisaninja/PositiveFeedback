@@ -7,6 +7,8 @@
 //
 
 #import "TimerInterfaceController.h"
+#import <HealthKit/HKWorkoutSession.h>
+#import <HealthKit/HKHealthStore.h>
 
 
 @interface TimerInterfaceController ()
@@ -34,6 +36,11 @@
     [self prepareAnimation];
     [_progressBarPicker setSelectedItemIndex:0];
     [_progressBarPicker setHidden:TRUE];
+    HKWorkoutConfiguration *runningWorkoutConfig = [[HKWorkoutConfiguration alloc] init];
+    runningWorkoutConfig.activityType = HKWorkoutActivityTypeRunning;
+    runningWorkoutConfig.locationType = HKWorkoutSessionLocationTypeOutdoor;
+    _runningWorkout = [[HKWorkoutSession alloc] initWithConfiguration:runningWorkoutConfig error:nil];
+    _healthStore = [HKHealthStore new];
     
 }
 
@@ -89,6 +96,7 @@
     [_stopWKInterfaceButton setHidden:FALSE];
     [_clearWKInterfaceButton setHidden:TRUE];
     [_progressBarPicker setHidden:FALSE];
+    [_healthStore startWorkoutSession:_runningWorkout];
 }
 
 - (IBAction)stopTimer:(id)sender {
@@ -114,6 +122,7 @@
     _timerCountSLabel.text = [NSString stringWithFormat:@"00.00"];
     _timerCountMLabel.text = [NSString stringWithFormat:@"00"];
     [_progressBarPicker setSelectedItemIndex:0];
+    [_healthStore endWorkoutSession:_runningWorkout];
 }
 -(void)prepareAnimation{
     WKPickerItem *zeroPickerItem = [[WKPickerItem alloc] init];
@@ -221,7 +230,6 @@
     NSArray *pickerItems = [[NSArray alloc] initWithObjects:zeroPickerItem, onePickerItem, twoPickerItem, threePickerItem, fourPickerItem, fivePickerItem, sixPickerItem, sevenPickerItem, eightPickerItem, ninePickerItem, tenPickerItem, elevenPickerItem, twelvePickerItem, thirteenPickerItem, fourteenPickerItem, fifteenPickerItem, sixteenPickerItem, seventeenPickerItem, eighteenPickerItem, nineteenPickerItem, twentyPickerItem, twentyOnePickerItem, twentyTwoPickerItem, twentyThreePickerItem, twentyFourPickerItem, twentyFivePickerItem, twentySixPickerItem, twentySevenPickerItem, twentyEightPickerItem, twentyNinePickerItem, thirtyPickerItem, thirtyOnePickerItem, thirtyTwoPickerItem, thirtyThreePickerItem, thirtyFourPickerItem, thirtyFourPickerItem, thirtyFivePickerItem, thirtySixPickerItem, thirtySevenPickerItem, thirtyEightPickerItem, thirtyNinePickerItem, fortyPickerItem, fortyOnePickerItem, fortyTwoPickerItem, fortyThreePickerItem,fortyFourPickerItem,fortyFivePickerItem, fortySixPickerItem, fortySevenPickerItem, fortyEightPickerItem, fortyNinePickerItem, fiftyPickerItem, fiftyOnePickerItem, fiftyTwoPickerItem, fiftyThreePickerItem, fiftyFourPickerItem, fiftyFivePickerItem, fiftySixPickerItem, fiftySevenPickerItem, fiftyEightPickerItem,fiftyNinePickerItem, sixtyPickerItem, sixtyOnePickerItem,sixtyTwoPickerItem, sixtyThreePickerItem, sixtyFourPickerItem, sixtyFivePickerItem, sixtySixPickerItem, sixtySevenPickerItem, sixtyEightPickerItem, sixtyNinePickerItem, seventyPickerItem, seventyOnePickerItem, seventyTwoPickerItem, seventyThreePickerItem, seventyFourPickerItem, seventyFivePickerItem, seventySixPickerItem, seventySevenPickerItem, seventyEightPickerItem, seventyNinePickerItem, eightyPickerItem, eightyOnePickerItem, eightyTwoPickerItem, eightyThreePickerItem, eightyFourPickerItem, eightyFivePickerItem, eightySixPickerItem, eightySevenPickerItem, eightyEightPickerItem, eightyNinePickerItem, ninetyPickerItem, ninetyOnePickerItem, ninetyTwoPickerItem, ninetyThreePickerItem, ninetyFourPickerItem, ninetyFivePickerItem, ninetySixPickerItem, ninetySevenPickerItem, ninetyEightPickerItem, ninetyNinePickerItem, oneHundredPickerItem, nil];
     for (int i=0; i<=100; i++) {
         [[pickerItems objectAtIndex:i] setContentImage:[WKImage imageWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"%d.png", i]]]];
-        NSLog(@"%d", i);
     }
     [self.progressBarPicker setItems:pickerItems];
 }
