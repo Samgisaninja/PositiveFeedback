@@ -32,6 +32,7 @@
 @property (strong, nonatomic) NSNumber *goalMinutes;
 @property (strong, nonatomic) NSNumber *goalSeconds;
 @property (strong, nonatomic) NSNumber *runDistance;
+@property (strong, nonatomic) HKWorkoutConfiguration *runningWorkoutConfig;
 @property (strong, nonatomic) HKWorkoutSession *runningWorkout;
 @property (strong, nonatomic) HKHealthStore *healthStore;
 @property float goalTime;

@@ -36,10 +36,10 @@
     [self prepareAnimation];
     [_progressBarPicker setSelectedItemIndex:0];
     [_progressBarPicker setHidden:TRUE];
-    HKWorkoutConfiguration *runningWorkoutConfig = [[HKWorkoutConfiguration alloc] init];
-    runningWorkoutConfig.activityType = HKWorkoutActivityTypeRunning;
-    runningWorkoutConfig.locationType = HKWorkoutSessionLocationTypeOutdoor;
-    _runningWorkout = [[HKWorkoutSession alloc] initWithConfiguration:runningWorkoutConfig error:nil];
+    _runningWorkoutConfig = [[HKWorkoutConfiguration alloc] init];
+    _runningWorkoutConfig.activityType = HKWorkoutActivityTypeRunning;
+    _runningWorkoutConfig.locationType = HKWorkoutSessionLocationTypeOutdoor;
+    _runningWorkout = [[HKWorkoutSession alloc] initWithConfiguration:_runningWorkoutConfig error:nil];
     _healthStore = [HKHealthStore new];
     
 }
@@ -123,6 +123,11 @@
     _timerCountMLabel.text = [NSString stringWithFormat:@"00"];
     [_progressBarPicker setSelectedItemIndex:0];
     [_healthStore endWorkoutSession:_runningWorkout];
+    _healthStore = nil;
+    _runningWorkout = nil;
+    _runningWorkout = [[HKWorkoutSession alloc] initWithConfiguration:_runningWorkoutConfig error:nil];
+    _healthStore = [HKHealthStore new];
+    
 }
 -(void)prepareAnimation{
     WKPickerItem *zeroPickerItem = [[WKPickerItem alloc] init];
