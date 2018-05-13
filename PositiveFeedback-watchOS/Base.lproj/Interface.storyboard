@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xzl-NP-PDw">
-    <device id="watch38" orientation="portrait">
+    <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,6 +16,7 @@
                     <items>
                         <label alignment="left" text="Distance:" id="Urs-ax-Jg3"/>
                         <picker height="85" alignment="left" indicatorMode="shownWhileFocused" id="Itq-lT-AvL">
+                            <variation key="device=watch42mm" height="108"/>
                             <connections>
                                 <action selector="distancePickerAction:" destination="xzl-NP-PDw" id="MUs-HO-YMR"/>
                             </connections>
@@ -31,7 +32,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-354" y="45"/>
+            <point key="canvasLocation" x="-354.82051282051282" y="44.897435897435898"/>
         </scene>
         <!--TimePickerInterfaceController-->
         <scene sceneID="WhI-71-GZg">
@@ -55,12 +56,14 @@
                         </group>
                         <group width="1" alignment="left" id="XUv-fy-YqF">
                             <items>
-                                <picker width="66" height="105" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="Zzn-ad-dyF">
+                                <picker width="66" height="85" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="Zzn-ad-dyF">
+                                    <variation key="device=watch42mm" height="106" width="75"/>
                                     <connections>
                                         <action selector="minutesPickerAction:" destination="hyJ-SX-hSE" id="XKa-it-dXf"/>
                                     </connections>
                                 </picker>
-                                <picker width="66" height="105" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="jpu-GF-TZl">
+                                <picker width="66" height="85" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="jpu-GF-TZl">
+                                    <variation key="device=watch42mm" height="108" width="75"/>
                                     <connections>
                                         <action selector="secondsPickerAction:" destination="hyJ-SX-hSE" id="TPl-th-0he"/>
                                     </connections>
@@ -79,7 +82,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-106" y="45"/>
+            <point key="canvasLocation" x="-107.23076923076924" y="22.230769230769234"/>
         </scene>
         <!--TimerInterfaceController-->
         <scene sceneID="gDW-uc-5Z6">
@@ -88,30 +91,35 @@
                     <items>
                         <group width="1" alignment="left" id="zFi-WG-4el">
                             <items>
-                                <label alignment="left" text="99" id="NJH-rD-Qu9">
+                                <label alignment="center" text="99" id="NJH-rD-Qu9">
                                     <fontDescription key="font" type="system" pointSize="35"/>
                                 </label>
-                                <label alignment="left" text=":" id="l3p-kV-CZI">
+                                <label alignment="center" text=":" id="l3p-kV-CZI">
                                     <fontDescription key="font" type="system" pointSize="35"/>
                                 </label>
-                                <label alignment="left" text="04.90" id="yrG-cw-7IY">
+                                <label alignment="center" text="04.90" id="yrG-cw-7IY">
                                     <fontDescription key="font" type="system" pointSize="35"/>
                                 </label>
                             </items>
                         </group>
-                        <picker width="64" height="64" alignment="center" style="sequence" enabled="NO" id="hMm-Rx-bvl"/>
-                        <button width="136" height="120" alignment="center" title="Hold and release to start" id="4h3-V8-DR6">
+                        <picker width="64" height="64" alignment="center" style="sequence" enabled="NO" id="hMm-Rx-bvl">
+                            <variation key="device=watch42mm" height="76" width="76"/>
+                        </picker>
+                        <button width="136" height="104" alignment="center" title="Hold and release to start" id="4h3-V8-DR6">
                             <fontDescription key="font" type="system" pointSize="14"/>
+                            <variation key="device=watch42mm" height="136"/>
                             <connections>
                                 <action selector="startTimer:" destination="dgo-1B-wLR" id="0tP-fy-Q2U"/>
                             </connections>
                         </button>
                         <button width="136" height="37" alignment="center" verticalAlignment="center" title="Stop" id="nTb-jP-eLg" userLabel="StopWK Interface Button">
+                            <variation key="device=watch42mm" height="48"/>
                             <connections>
                                 <action selector="stopTimer:" destination="dgo-1B-wLR" id="nNz-gZ-QZb"/>
                             </connections>
                         </button>
                         <button width="136" height="37" alignment="center" verticalAlignment="center" title="Clear" id="ZIr-Oc-J5F" userLabel="ClearWK Interface Button">
+                            <variation key="device=watch42mm" height="48"/>
                             <connections>
                                 <action selector="clearTimer:" destination="dgo-1B-wLR" id="h0Y-nX-6MI"/>
                             </connections>
@@ -127,7 +135,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="129" y="120"/>
+            <point key="canvasLocation" x="128.15384615384616" y="129.89743589743591"/>
         </scene>
     </scenes>
 </document>
