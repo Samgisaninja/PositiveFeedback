@@ -33,6 +33,7 @@
     [fiveThousandMetersEveryK setTitle:@"5K (1K)"];
     _distancePickerItems = [[NSArray alloc] initWithObjects:nullPickerItem, eightHundredMeters, sixteenHundredMeters, thirtyTwoHundredMetersEveryMile, thirtyTwoHundredMetersEveryFourHundred, fiveThousandMetersEveryMile, fiveThousandMetersEveryK, nil];
     [self.distancePicker setItems:self.distancePickerItems];
+    [_distancePicker setSelectedItemIndex:1];
 }
 - (IBAction)distancePickerAction:(NSInteger)value {
      switch (value) {
@@ -58,7 +59,7 @@
             break;
      }
 }
-
+ 
 - (void)willActivate {
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];

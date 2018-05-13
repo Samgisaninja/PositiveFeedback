@@ -148,8 +148,8 @@
     [self.secondsPicker setItems:_secondsPickerItems];
     _minutesPickerItems = [[NSArray alloc] initWithObjects:nullPickerItem, zeroItem, oneItem, twoItem, threeItem, fourItem, fiveItem, sixItem, sevenItem, eightItem, nineItem, tenItem, elevenItem, twelveItem, thirteenItem, fourteenItem, fifteenItem, sixteenItem, seventeenItem, eighteenItem, nineteenItem, twentyItem, twentyOneItem, twentyTwoItem, twentyTwoItem, twentyThreeItem, twentyFourItem, twentyFiveItem, twentySixItem, twentySevenItem, twentyEightItem, twentyNineItem, thirtyItem, nil];
     [self.minutesPicker setItems:_minutesPickerItems];
-    [_secondsPicker setSelectedItemIndex:0];
-    [_minutesPicker setSelectedItemIndex:0];
+    [_secondsPicker setSelectedItemIndex:1];
+    [_minutesPicker setSelectedItemIndex:1];
     //Sorry.
 }
 
