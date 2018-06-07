@@ -80,7 +80,7 @@
     startTime = [NSDate date];
     relativeStartTime = [NSDate date];
     timeElapsed = 0;
-    secondsTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(update) userInfo:nil repeats:YES];
+    secondsTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(update) userInfo:nil repeats:YES];
     [[WKInterfaceDevice currentDevice] playHaptic:WKHapticTypeDirectionDown];
     [_startWKInterfaceButton setHidden:TRUE];
     [_stopWKInterfaceButton setHidden:FALSE];
