@@ -9,6 +9,7 @@
 #import "TimePickerViewController.h"
 #import "TimerViewController.h"
 #import "DistancePickerViewController.h"
+#import "EndlessViewController.h"
 
 @interface TimePickerViewController (){
     NSArray *_goalMinutesPickerData;
@@ -67,13 +68,25 @@
         destViewController.goalMinutes = _goalMinutes;
         destViewController.runDistance = runDistance;
     }
+    if ([segue.identifier isEqualToString:@"endlessDataShare"]){
+        EndlessViewController *destViewController = segue.destinationViewController;
+        destViewController.goalSeconds = _goalSeconds;
+        destViewController.goalMinutes = _goalMinutes;
+    }
+}
+- (IBAction)nextButtonAction:(id)sender {
+    if ([runDistance  isEqual: @(-1.0)]) {
+        [self performSegueWithIdentifier:@"endlessDataShare" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"goalDataShare" sender:self];
+    }
 }
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender   {
     if (_goalMinutes == 0) {
         if (_goalSeconds == 0) {
             UIAlertController *invalid = [UIAlertController alertControllerWithTitle:@"Invalid goal time" message:@"Please enter a valid goal" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *exitApp = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-            [invalid addAction:exitApp];
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+            [invalid addAction:okAction];
             [self presentViewController:invalid animated:YES completion:nil];
             return NO;
         } else {

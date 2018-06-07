@@ -13,5 +13,6 @@
 @property (strong, nonatomic) NSNumber *goalMinutes;
 @property (strong, nonatomic) NSNumber *goalSeconds;
 @property (strong, nonatomic) NSNumber *runDistance;
+@property (strong, nonatomic) NSNumber *runDistanceLocal;
 @end
 

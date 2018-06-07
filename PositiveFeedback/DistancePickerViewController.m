@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    distancePickerData = @[@"", @"800m (pings every 400m)", @"1600m (pings every 400m)", @"3200m (pings every 1600m)", @"3200m (pings every 400m)", @"5K (pings every mile)", @"5K (pings every 1K)"];
+    distancePickerData = @[@"", @"800m (pings every 400m)", @"1600m (pings every 400m)", @"3200m (pings every 1600m)", @"3200m (pings every 400m)", @"5K (pings every mile)", @"5K (pings every 1K)", @"Endless Mode"];
     self.distancePicker.dataSource = self;
     self.distancePicker.delegate = self;
 }
@@ -55,12 +55,14 @@
             break;
        case 6:
            _runDistance = @(5.0);
+       case 7:
+           _runDistance = @(-1.0);
         default:
             break;
     }
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"goalDataShare"]) {
+    if ([segue.identifier isEqualToString:@"distanceDataShare"]) {
         TimerViewController *destViewController = segue.destinationViewController;
         destViewController.runDistance = _runDistance;
     }
