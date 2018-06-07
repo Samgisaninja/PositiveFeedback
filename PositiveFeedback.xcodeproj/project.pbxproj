@@ -19,6 +19,7 @@
 		8D5D891720A768B400F21566 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5D891620A768B400F21566 /* HealthKit.framework */; };
 		8D65181C1FD3940500AB167F /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D65181B1FD3940500AB167F /* TimerViewController.m */; };
 		8D8421FF20C99F3D002484D2 /* EndlessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8421FE20C99F3D002484D2 /* EndlessViewController.m */; };
+		8D84220520C9F47B002484D2 /* EndlessInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D84220420C9F47B002484D2 /* EndlessInterfaceController.m */; };
 		8DAEC21A20044D0D00EDB61F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DAEC21820044D0D00EDB61F /* Interface.storyboard */; };
 		8DAEC21C20044D0D00EDB61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DAEC21B20044D0D00EDB61F /* Assets.xcassets */; };
 		8DAEC22320044D0D00EDB61F /* PositiveFeedback-watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8DAEC22220044D0D00EDB61F /* PositiveFeedback-watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -94,6 +95,8 @@
 		8D65181D1FD3945F00AB167F /* TimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		8D8421FD20C99F3D002484D2 /* EndlessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EndlessViewController.h; sourceTree = "<group>"; };
 		8D8421FE20C99F3D002484D2 /* EndlessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EndlessViewController.m; sourceTree = "<group>"; };
+		8D84220320C9F47B002484D2 /* EndlessInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EndlessInterfaceController.h; sourceTree = "<group>"; };
+		8D84220420C9F47B002484D2 /* EndlessInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EndlessInterfaceController.m; sourceTree = "<group>"; };
 		8DAEC21620044D0C00EDB61F /* PositiveFeedback-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PositiveFeedback-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DAEC21920044D0D00EDB61F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		8DAEC21B20044D0D00EDB61F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				8DAEC22B20044D0D00EDB61F /* ExtensionDelegate.m */,
 				8DAEC22D20044D0D00EDB61F /* Assets.xcassets */,
 				8DAEC22F20044D0D00EDB61F /* Info.plist */,
+				8D84220320C9F47B002484D2 /* EndlessInterfaceController.h */,
+				8D84220420C9F47B002484D2 /* EndlessInterfaceController.m */,
 				8D5D7AFA2012EB76008D359D /* DistancePickerInterfaceController.h */,
 				8D5D7AFB2012EB76008D359D /* DistancePickerInterfaceController.m */,
 				8D125B0B2017FEF10066616F /* TimePickerInterfaceController.h */,
@@ -369,6 +374,7 @@
 			files = (
 				8D125B0D2017FEF10066616F /* TimePickerInterfaceController.m in Sources */,
 				8DAEC22C20044D0D00EDB61F /* ExtensionDelegate.m in Sources */,
+				8D84220520C9F47B002484D2 /* EndlessInterfaceController.m in Sources */,
 				8D5D7AFC2012EB76008D359D /* DistancePickerInterfaceController.m in Sources */,
 				8DAEC22920044D0D00EDB61F /* TimerInterfaceController.m in Sources */,
 			);

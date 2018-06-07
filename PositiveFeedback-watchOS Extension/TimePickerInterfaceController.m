@@ -163,8 +163,13 @@
 }
 
 - (IBAction)nextButton {
+    if ([_runDistance isEqual:@(-1.0)]) {
+        NSDictionary * goalDataShare = @{@"goalMinutes": _goalMinutes, @"goalSeconds": _goalSeconds};
+        [self pushControllerWithName:@"EndlessInterfaceController" context:goalDataShare];
+    } else {
     NSDictionary * goalDataShare = @{@"runDistance" : _runDistance, @"goalMinutes": _goalMinutes, @"goalSeconds": _goalSeconds};
         [self pushControllerWithName:@"TimerInterfaceController" context:goalDataShare];
+    }
 }
 
 - (void)willActivate {

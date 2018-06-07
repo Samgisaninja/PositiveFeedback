@@ -24,6 +24,7 @@
     WKPickerItem *thirtyTwoHundredMetersEveryFourHundred = [[WKPickerItem alloc] init];
     WKPickerItem *fiveThousandMetersEveryMile = [[WKPickerItem alloc] init];
     WKPickerItem *fiveThousandMetersEveryK = [[WKPickerItem alloc] init];
+    WKPickerItem *endlessMode = [[WKPickerItem alloc] init];
     [nullPickerItem setTitle:@" "];
     [eightHundredMeters setTitle:@"800m (400m)"];
     [sixteenHundredMeters setTitle:@"1600m (400m)"];
@@ -31,7 +32,8 @@
     [thirtyTwoHundredMetersEveryFourHundred setTitle:@"3200m (400m)"];
     [fiveThousandMetersEveryMile setTitle:@"5K (1 mi)"];
     [fiveThousandMetersEveryK setTitle:@"5K (1K)"];
-    _distancePickerItems = [[NSArray alloc] initWithObjects:nullPickerItem, eightHundredMeters, sixteenHundredMeters, thirtyTwoHundredMetersEveryMile, thirtyTwoHundredMetersEveryFourHundred, fiveThousandMetersEveryMile, fiveThousandMetersEveryK, nil];
+    [endlessMode setTitle:@"Endless Mode"];
+    _distancePickerItems = [[NSArray alloc] initWithObjects:nullPickerItem, eightHundredMeters, sixteenHundredMeters, thirtyTwoHundredMetersEveryMile, thirtyTwoHundredMetersEveryFourHundred, fiveThousandMetersEveryMile, fiveThousandMetersEveryK, endlessMode, nil];
     [self.distancePicker setItems:self.distancePickerItems];
     [_distancePicker setSelectedItemIndex:1];
 }
@@ -55,6 +57,8 @@
             break;
         case 6:
             _runDistance = @(5.0);
+         case 7:
+             _runDistance = @(-1.0);
         default:
             break;
      }

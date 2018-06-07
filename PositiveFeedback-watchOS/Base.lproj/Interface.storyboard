@@ -135,7 +135,60 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="129" y="105"/>
+            <point key="canvasLocation" x="113" y="-181"/>
+        </scene>
+        <!--EndlessInterfaceController-->
+        <scene sceneID="Qrf-WS-qwN">
+            <objects>
+                <controller identifier="EndlessInterfaceController" id="N8i-5r-JDl" customClass="EndlessInterfaceController">
+                    <items>
+                        <group width="1" alignment="left" id="qC0-xh-GOS">
+                            <items>
+                                <label alignment="center" text="99" id="P6a-NF-GlG">
+                                    <fontDescription key="font" type="system" pointSize="35"/>
+                                </label>
+                                <label alignment="center" text=":" id="KEY-c3-npI">
+                                    <fontDescription key="font" type="system" pointSize="35"/>
+                                </label>
+                                <label alignment="center" text="04.90" id="MNT-mS-IQO">
+                                    <fontDescription key="font" type="system" pointSize="35"/>
+                                </label>
+                            </items>
+                        </group>
+                        <picker width="64" height="64" alignment="center" style="sequence" enabled="NO" id="Zb1-14-0eY">
+                            <variation key="device=watch42mm" height="76" width="76"/>
+                        </picker>
+                        <button width="136" height="104" alignment="center" title="Hold and release to start" id="U2A-W1-TJ3">
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                            <variation key="device=watch42mm" height="136"/>
+                            <connections>
+                                <action selector="startTimer:" destination="N8i-5r-JDl" id="a2W-7q-8dy"/>
+                            </connections>
+                        </button>
+                        <button width="136" height="37" alignment="center" verticalAlignment="center" title="Stop" id="Vy2-JK-GCC" userLabel="StopWK Interface Button">
+                            <variation key="device=watch42mm" height="48"/>
+                            <connections>
+                                <action selector="stopTimer:" destination="N8i-5r-JDl" id="Bs9-oh-Qj1"/>
+                            </connections>
+                        </button>
+                        <button width="136" height="37" alignment="center" verticalAlignment="center" title="Clear" id="zLv-Gk-bCY" userLabel="ClearWK Interface Button">
+                            <variation key="device=watch42mm" height="48"/>
+                            <connections>
+                                <action selector="clearTimer:" destination="N8i-5r-JDl" id="dVt-YO-06Y"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="clearWKInterfaceButton" destination="zLv-Gk-bCY" id="W5c-up-YdY"/>
+                        <outlet property="progressBarPicker" destination="Zb1-14-0eY" id="IB4-A7-FMm"/>
+                        <outlet property="startWKInterfaceButton" destination="U2A-W1-TJ3" id="v0f-aL-hRJ"/>
+                        <outlet property="stopWKInterfaceButton" destination="Vy2-JK-GCC" id="KuJ-Lb-03Z"/>
+                        <outlet property="timerCountMLabel" destination="P6a-NF-GlG" id="djd-JZ-w3O"/>
+                        <outlet property="timerCountSLabel" destination="MNT-mS-IQO" id="dCK-i2-Aa6"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="113" y="325"/>
         </scene>
     </scenes>
 </document>
