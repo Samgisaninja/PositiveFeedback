@@ -7,8 +7,6 @@
 //
 
 #import "TimerInterfaceController.h"
-#import <HealthKit/HKWorkoutSession.h>
-#import <HealthKit/HKHealthStore.h>
 
 
 @interface TimerInterfaceController ()
