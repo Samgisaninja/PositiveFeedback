@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14269.12" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xzl-NP-PDw">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14269.14" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xzl-NP-PDw">
     <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14224.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14224.4"/>
     </dependencies>
     <scenes>
         <!--DistancePickerInterfaceController-->
@@ -14,7 +14,7 @@
             <objects>
                 <controller identifier="DistancePickerInterfaceController" id="xzl-NP-PDw" customClass="DistancePickerInterfaceController">
                     <items>
-                        <label alignment="left" text="Distance:" id="Urs-ax-Jg3"/>
+                        <label alignment="left" text="Distance (Interval):" id="Urs-ax-Jg3"/>
                         <picker height="85" alignment="left" indicatorMode="shownWhileFocused" id="Itq-lT-AvL">
                             <variation key="device=watch42mm" height="108"/>
                             <connections>
@@ -51,7 +51,7 @@
                                 <separator alignment="left" id="yYa-zo-uuL">
                                     <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </separator>
-                                <label alignment="left" text="Seconds" textAlignment="right" id="x3c-Zh-1cF"/>
+                                <label width="79" alignment="left" text="Seconds" textAlignment="right" id="x3c-Zh-1cF"/>
                             </items>
                         </group>
                         <group width="1" alignment="left" id="XUv-fy-YqF">
