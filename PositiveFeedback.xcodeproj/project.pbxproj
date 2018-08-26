@@ -27,6 +27,7 @@
 		8DAEC22C20044D0D00EDB61F /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEC22B20044D0D00EDB61F /* ExtensionDelegate.m */; };
 		8DAEC22E20044D0D00EDB61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DAEC22D20044D0D00EDB61F /* Assets.xcassets */; };
 		8DAEC23220044D0D00EDB61F /* PositiveFeedback-watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8DAEC21620044D0C00EDB61F /* PositiveFeedback-watchOS.app */; };
+		8DB6FFC621327AEE00F4F0CA /* LapsInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6FFC521327AEE00F4F0CA /* LapsInterfaceController.m */; };
 		8DD5143E1FF2FA5F00BC6247 /* DistancePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5143D1FF2FA5F00BC6247 /* DistancePickerViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,8 @@
 		8DAEC22B20044D0D00EDB61F /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
 		8DAEC22D20044D0D00EDB61F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DAEC22F20044D0D00EDB61F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DB6FFC421327AEE00F4F0CA /* LapsInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LapsInterfaceController.h; sourceTree = "<group>"; };
+		8DB6FFC521327AEE00F4F0CA /* LapsInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LapsInterfaceController.m; sourceTree = "<group>"; };
 		8DD5143C1FF2FA5F00BC6247 /* DistancePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistancePickerViewController.h; sourceTree = "<group>"; };
 		8DD5143D1FF2FA5F00BC6247 /* DistancePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistancePickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,6 +204,8 @@
 				8D5D891520A768B400F21566 /* PositiveFeedback-watchOS Extension.entitlements */,
 				8DAEC22720044D0D00EDB61F /* TimerInterfaceController.h */,
 				8DAEC22820044D0D00EDB61F /* TimerInterfaceController.m */,
+				8DB6FFC421327AEE00F4F0CA /* LapsInterfaceController.h */,
+				8DB6FFC521327AEE00F4F0CA /* LapsInterfaceController.m */,
 				8DAEC22A20044D0D00EDB61F /* ExtensionDelegate.h */,
 				8DAEC22B20044D0D00EDB61F /* ExtensionDelegate.m */,
 				8DAEC22D20044D0D00EDB61F /* Assets.xcassets */,
@@ -377,6 +382,7 @@
 				8D84220520C9F47B002484D2 /* EndlessInterfaceController.m in Sources */,
 				8D5D7AFC2012EB76008D359D /* DistancePickerInterfaceController.m in Sources */,
 				8DAEC22920044D0D00EDB61F /* TimerInterfaceController.m in Sources */,
+				8DB6FFC621327AEE00F4F0CA /* LapsInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

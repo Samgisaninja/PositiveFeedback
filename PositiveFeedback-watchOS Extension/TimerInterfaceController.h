@@ -19,11 +19,7 @@
     NSString *justInvalidated;
     int intervalsPassed;
 }
--(void)update;
--(void)resetTimer;
--(void)prepareAnimation;
 @property IBOutlet WKInterfacePicker *progressBarPicker;
--(IBAction)startTimer:(id)sender;
 @property IBOutlet WKInterfaceLabel *timerCountSLabel;
 @property IBOutlet WKInterfaceLabel *timerCountMLabel;
 @property IBOutlet WKInterfaceButton *stopWKInterfaceButton;

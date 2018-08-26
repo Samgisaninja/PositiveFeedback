@@ -20,12 +20,8 @@
     NSString *justInvalidated;
     int intervalsPassed;
 }
--(void)update;
--(void)resetTimer;
 @property (strong, nonatomic) IBOutlet UILabel *releaseHintLabel;
 @property (strong, nonatomic) IBOutlet UIProgressView *progressBar;
--(IBAction)startTimer:(id)sender;
-- (IBAction)clearTimer:(id)sender;
 @property (strong, nonatomic) NSNumber *goalMinutes;
 @property (strong, nonatomic) NSNumber *goalSeconds;
 @property (strong, nonatomic) NSNumber *runDistance;
