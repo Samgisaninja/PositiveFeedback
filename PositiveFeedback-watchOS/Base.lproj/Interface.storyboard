@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14269.14" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xzl-NP-PDw">
-    <device id="watch42" orientation="portrait">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14269.14" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="09K-Re-Vvd">
+    <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,6 +9,56 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14224.4"/>
     </dependencies>
     <scenes>
+        <!--Laps Interface Controller-->
+        <scene sceneID="ogy-fP-Lzg">
+            <objects>
+                <controller id="09K-Re-Vvd" customClass="LapsInterfaceController">
+                    <items>
+                        <label height="17" alignment="left" text="Number of Laps:" id="ZNG-Dq-ZYD"/>
+                        <label width="1" height="18" alignment="center" text="4" textAlignment="center" id="6Jp-UI-kjk">
+                            <fontDescription key="font" type="system" pointSize="22"/>
+                        </label>
+                        <group width="1" alignment="left" id="gD0-2F-1uH">
+                            <items>
+                                <button width="0.48999999999999999" height="28" alignment="left" title="-" id="s5T-0d-wiq">
+                                    <connections>
+                                        <action selector="minusButton:" destination="09K-Re-Vvd" id="dfY-WP-kWz"/>
+                                    </connections>
+                                </button>
+                                <button width="0.51000000000000001" height="28" alignment="right" title="+" id="3WZ-5a-keL">
+                                    <connections>
+                                        <action selector="plusButton:" destination="09K-Re-Vvd" id="IpV-SC-LRC"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <button width="1" height="36" alignment="left" title="Next" id="vix-Uc-3Nx">
+                            <connections>
+                                <action selector="nextButton:" destination="09K-Re-Vvd" id="dV1-Zt-bQC"/>
+                            </connections>
+                        </button>
+                        <group width="1" alignment="left" id="VZO-5b-q6K">
+                            <items>
+                                <button width="0.48999999999999999" height="36" alignment="left" title="5K Mode" id="d5W-yb-4OJ">
+                                    <connections>
+                                        <action selector="fiveKButton:" destination="09K-Re-Vvd" id="lnG-Ms-MtR"/>
+                                    </connections>
+                                </button>
+                                <button width="0.51000000000000001" height="36" alignment="right" title="Endless Mode" id="j0e-om-jEn">
+                                    <connections>
+                                        <action selector="endlessButton:" destination="09K-Re-Vvd" id="fj2-EG-ElV"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="runDistanceLabel" destination="6Jp-UI-kjk" id="qL8-MD-c36"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-626.82051282051282" y="20.487179487179489"/>
+        </scene>
         <!--DistancePickerInterfaceController-->
         <scene sceneID="hEE-qi-DP9">
             <objects>
@@ -16,6 +66,7 @@
                     <items>
                         <label alignment="left" text="Distance (Interval):" id="Urs-ax-Jg3"/>
                         <picker height="85" alignment="left" indicatorMode="shownWhileFocused" id="Itq-lT-AvL">
+                            <variation key="device=watch38mm" height="172"/>
                             <variation key="device=watch42mm" height="108"/>
                             <connections>
                                 <action selector="distancePickerAction:" destination="xzl-NP-PDw" id="MUs-HO-YMR"/>
@@ -27,12 +78,18 @@
                             </connections>
                         </button>
                     </items>
+                    <variation key="device=watch38mm">
+                        <mask key="items">
+                            <exclude reference="Urs-ax-Jg3"/>
+                            <exclude reference="WgJ-v1-7xq"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <outlet property="distancePicker" destination="Itq-lT-AvL" id="FY3-Ka-Pp2"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-358" y="22"/>
+            <point key="canvasLocation" x="-358" y="21.5"/>
         </scene>
         <!--TimePickerInterfaceController-->
         <scene sceneID="WhI-71-GZg">
@@ -41,7 +98,7 @@
                     <items>
                         <group width="1" alignment="left" id="0I4-Aj-a17">
                             <items>
-                                <label alignment="left" text="Minutes" textAlignment="left" id="fsf-pu-RrH"/>
+                                <label width="0.45000000000000001" alignment="left" text="Minutes" textAlignment="left" id="fsf-pu-RrH"/>
                                 <separator alignment="left" id="sZ3-72-0KB">
                                     <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </separator>
@@ -51,7 +108,7 @@
                                 <separator alignment="left" id="yYa-zo-uuL">
                                     <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </separator>
-                                <label width="79" alignment="left" text="Seconds" textAlignment="right" id="x3c-Zh-1cF"/>
+                                <label width="0.45000000000000001" alignment="right" text="Seconds" textAlignment="right" id="x3c-Zh-1cF"/>
                             </items>
                         </group>
                         <group width="1" alignment="left" id="XUv-fy-YqF">
