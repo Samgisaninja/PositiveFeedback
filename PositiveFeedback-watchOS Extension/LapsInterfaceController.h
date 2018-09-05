@@ -9,7 +9,6 @@
 #import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
 
-float runDistanceFloat;
 @interface LapsInterfaceController : WKInterfaceController
 @property (strong, nonatomic) NSNumber *runDistance;
 @property (strong, nonatomic) IBOutlet WKInterfaceLabel *runDistanceLabel;

@@ -8,6 +8,15 @@
 
 #import "LapsInterfaceController.h"
 
+
+@interface LapsInterfaceController (){
+    float runDistanceFloat;
+}
+
+
+@end
+
+
 @implementation LapsInterfaceController
 
 - (void)awakeWithContext:(id)context {

@@ -7,7 +7,7 @@
 //
 
 #import "TimePickerInterfaceController.h"
-#import "DistancePickerInterfaceController.h"
+#import "LapsInterfaceController.h"
 
 @interface TimePickerInterfaceController ()
 

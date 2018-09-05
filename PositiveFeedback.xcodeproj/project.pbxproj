@@ -14,7 +14,6 @@
 		8D1205AF1FD0D33900691524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D1205AD1FD0D33900691524 /* LaunchScreen.storyboard */; };
 		8D1205B21FD0D33900691524 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1205B11FD0D33900691524 /* main.m */; };
 		8D125B0D2017FEF10066616F /* TimePickerInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D125B0C2017FEF10066616F /* TimePickerInterfaceController.m */; };
-		8D5D7AFC2012EB76008D359D /* DistancePickerInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D7AFB2012EB76008D359D /* DistancePickerInterfaceController.m */; };
 		8D5D891420A768A300F21566 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5D891320A768A300F21566 /* HealthKit.framework */; };
 		8D5D891720A768B400F21566 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5D891620A768B400F21566 /* HealthKit.framework */; };
 		8D65181C1FD3940500AB167F /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D65181B1FD3940500AB167F /* TimerViewController.m */; };
@@ -86,8 +85,6 @@
 		8D1205B11FD0D33900691524 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D125B0B2017FEF10066616F /* TimePickerInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimePickerInterfaceController.h; sourceTree = "<group>"; };
 		8D125B0C2017FEF10066616F /* TimePickerInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimePickerInterfaceController.m; sourceTree = "<group>"; };
-		8D5D7AFA2012EB76008D359D /* DistancePickerInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DistancePickerInterfaceController.h; sourceTree = "<group>"; };
-		8D5D7AFB2012EB76008D359D /* DistancePickerInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DistancePickerInterfaceController.m; sourceTree = "<group>"; };
 		8D5D891120A768A200F21566 /* PositiveFeedback.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PositiveFeedback.entitlements; sourceTree = "<group>"; };
 		8D5D891320A768A300F21566 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		8D5D891520A768B400F21566 /* PositiveFeedback-watchOS Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PositiveFeedback-watchOS Extension.entitlements"; sourceTree = "<group>"; };
@@ -212,8 +209,6 @@
 				8DAEC22F20044D0D00EDB61F /* Info.plist */,
 				8D84220320C9F47B002484D2 /* EndlessInterfaceController.h */,
 				8D84220420C9F47B002484D2 /* EndlessInterfaceController.m */,
-				8D5D7AFA2012EB76008D359D /* DistancePickerInterfaceController.h */,
-				8D5D7AFB2012EB76008D359D /* DistancePickerInterfaceController.m */,
 				8D125B0B2017FEF10066616F /* TimePickerInterfaceController.h */,
 				8D125B0C2017FEF10066616F /* TimePickerInterfaceController.m */,
 			);
@@ -380,7 +375,6 @@
 				8D125B0D2017FEF10066616F /* TimePickerInterfaceController.m in Sources */,
 				8DAEC22C20044D0D00EDB61F /* ExtensionDelegate.m in Sources */,
 				8D84220520C9F47B002484D2 /* EndlessInterfaceController.m in Sources */,
-				8D5D7AFC2012EB76008D359D /* DistancePickerInterfaceController.m in Sources */,
 				8DAEC22920044D0D00EDB61F /* TimerInterfaceController.m in Sources */,
 				8DB6FFC621327AEE00F4F0CA /* LapsInterfaceController.m in Sources */,
 			);
