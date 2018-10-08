@@ -61,7 +61,7 @@
         timeElapsed = 0;
         secondsTimer = [NSTimer scheduledTimerWithTimeInterval:0.0001 target:self selector:@selector(update) userInfo:nil repeats:YES];
         _releaseHintLabel.hidden = TRUE;
-        self.view.backgroundColor = [UIColor darkGrayColor];
+        self.view.backgroundColor = [UIColor whiteColor];
         [startUIButton setTitle:@"Stop" forState:UIControlStateNormal];
     }
 }
