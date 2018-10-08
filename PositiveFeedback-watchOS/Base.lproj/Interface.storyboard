@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14269.14" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="09K-Re-Vvd">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14313.18" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="09K-Re-Vvd">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14224.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14238.10"/>
     </dependencies>
     <scenes>
         <!--Laps Interface Controller-->
@@ -57,39 +57,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-626.82051282051282" y="20.487179487179489"/>
-        </scene>
-        <!--DistancePickerInterfaceController-->
-        <scene sceneID="hEE-qi-DP9">
-            <objects>
-                <controller identifier="DistancePickerInterfaceController" id="xzl-NP-PDw" customClass="DistancePickerInterfaceController">
-                    <items>
-                        <label alignment="left" text="Distance (Interval):" id="Urs-ax-Jg3"/>
-                        <picker height="85" alignment="left" indicatorMode="shownWhileFocused" id="Itq-lT-AvL">
-                            <variation key="device=watch38mm" height="172"/>
-                            <variation key="device=watch42mm" height="108"/>
-                            <connections>
-                                <action selector="distancePickerAction:" destination="xzl-NP-PDw" id="MUs-HO-YMR"/>
-                            </connections>
-                        </picker>
-                        <button width="1" alignment="left" title="Next" id="WgJ-v1-7xq">
-                            <connections>
-                                <action selector="nextButton" destination="xzl-NP-PDw" id="xEp-Ua-ufM"/>
-                            </connections>
-                        </button>
-                    </items>
-                    <variation key="device=watch38mm">
-                        <mask key="items">
-                            <exclude reference="Urs-ax-Jg3"/>
-                            <exclude reference="WgJ-v1-7xq"/>
-                        </mask>
-                    </variation>
-                    <connections>
-                        <outlet property="distancePicker" destination="Itq-lT-AvL" id="FY3-Ka-Pp2"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="-358" y="21.5"/>
+            <point key="canvasLocation" x="-429" y="22"/>
         </scene>
         <!--TimePickerInterfaceController-->
         <scene sceneID="WhI-71-GZg">
