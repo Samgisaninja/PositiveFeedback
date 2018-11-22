@@ -116,7 +116,7 @@
                     <connections>
                         <outlet property="goalTimePicker" destination="wEy-zd-LHi" id="QgK-SC-dwj"/>
                         <segue destination="TXs-HP-k9T" kind="show" identifier="goalDataShare" id="MCZ-1E-sJa"/>
-                        <segue destination="VuS-cP-iBS" kind="show" identifier="endlessDataShare" id="B4k-IM-GYg"/>
+                        <segue destination="yzC-MZ-bDK" kind="show" identifier="endlessDataShare" id="jdy-Aj-hvf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddY-rH-hee" sceneMemberID="firstResponder"/>
@@ -252,94 +252,114 @@
             <point key="canvasLocation" x="-684" y="133.5832083958021"/>
         </scene>
         <!--Endless View Controller-->
-        <scene sceneID="GRB-hM-EYb">
+        <scene sceneID="RTp-bp-SIi">
             <objects>
-                <viewController id="VuS-cP-iBS" customClass="EndlessViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="J6r-pZ-bfZ">
+                <viewController id="yzC-MZ-bDK" customClass="EndlessViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HRj-WE-yJr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="04:90" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zN-5u-4nT">
-                                <rect key="frame" x="163" y="321" width="109" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="04:90" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICd-Vz-39e">
+                                <rect key="frame" x="162.66666666666666" y="258" width="108.99999999999997" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9V-f9-qxB">
-                                <rect key="frame" x="150" y="321" width="11" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release to start!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vI-K5-wB4">
-                                <rect key="frame" x="125" y="506" width="125" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGl-XI-vOb">
-                                <rect key="frame" x="151" y="597" width="73" height="51"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6r-fV-FZY">
+                                <rect key="frame" x="151" y="712" width="73" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="Clear"/>
                                 <connections>
-                                    <action selector="clearTimer:" destination="VuS-cP-iBS" eventType="touchUpInside" id="Z5i-TA-OTt"/>
+                                    <action selector="clearTimer:" destination="yzC-MZ-bDK" eventType="touchUpInside" id="Gzb-kW-M6L"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" restorationIdentifier="progressBar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SnJ-8R-OVc">
-                                <rect key="frame" x="25" y="405" width="325" height="2"/>
-                            </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oit-gO-Q74">
-                                <rect key="frame" x="102" y="321" width="49" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0R-Fc-WQg">
+                                <rect key="frame" x="105.66666666666669" y="258" width="49" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TtJ-ns-6ZZ">
-                                <rect key="frame" x="0.0" y="138" width="375" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2c-Mb-FUX">
+                                <rect key="frame" x="31.666666666666657" y="98" width="312" height="48"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Hold and release to start">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="startTimer:" destination="VuS-cP-iBS" eventType="touchUpInside" id="cgq-AK-Feb"/>
-                                    <action selector="startTouchDown:" destination="VuS-cP-iBS" eventType="touchDown" id="EPI-8P-qRD"/>
+                                    <action selector="startTimer:" destination="yzC-MZ-bDK" eventType="touchUpInside" id="jrJ-wI-sAi"/>
+                                    <action selector="startTouchDown:" destination="yzC-MZ-bDK" eventType="touchDown" id="Eg0-IO-HmS"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4u-Kq-91V" customClass="CircleProgressBar">
+                                <rect key="frame" x="112.66666666666669" y="331" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="l7K-Cb-jWC"/>
+                                    <constraint firstAttribute="height" constant="150" id="oUJ-LW-Anf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressBarWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressBarProgressColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressBarTrackColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hintHidden" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <real key="value" value="270"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJ1-IB-6fs">
+                                <rect key="frame" x="153" y="255" width="11" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release to start!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWg-Ng-z9D">
+                                <rect key="frame" x="125" y="521" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="TtJ-ns-6ZZ" firstAttribute="width" secondItem="J6r-pZ-bfZ" secondAttribute="width" id="1pL-x5-wW1"/>
-                            <constraint firstItem="7vI-K5-wB4" firstAttribute="top" secondItem="SnJ-8R-OVc" secondAttribute="bottom" constant="99" id="2yl-aR-zEg"/>
-                            <constraint firstItem="h0d-ZD-KWC" firstAttribute="bottom" secondItem="eGl-XI-vOb" secondAttribute="bottom" constant="130" id="5mn-4z-QEb"/>
-                            <constraint firstItem="TtJ-ns-6ZZ" firstAttribute="top" secondItem="h0d-ZD-KWC" secondAttribute="top" constant="50" id="6ig-NQ-Dl2"/>
-                            <constraint firstItem="SnJ-8R-OVc" firstAttribute="centerX" secondItem="J6r-pZ-bfZ" secondAttribute="centerX" id="BNd-fn-rRy"/>
-                            <constraint firstItem="SnJ-8R-OVc" firstAttribute="centerX" secondItem="J6r-pZ-bfZ" secondAttribute="centerX" id="CBk-dh-UhF"/>
-                            <constraint firstItem="D9V-f9-qxB" firstAttribute="centerX" secondItem="J6r-pZ-bfZ" secondAttribute="centerX" constant="-32" id="HFv-DJ-LdN"/>
-                            <constraint firstItem="3zN-5u-4nT" firstAttribute="centerX" secondItem="J6r-pZ-bfZ" secondAttribute="centerX" constant="30" id="MEX-ox-x28"/>
-                            <constraint firstItem="SnJ-8R-OVc" firstAttribute="centerY" secondItem="J6r-pZ-bfZ" secondAttribute="centerY" id="Svp-yK-pTL"/>
-                            <constraint firstItem="eGl-XI-vOb" firstAttribute="centerX" secondItem="J6r-pZ-bfZ" secondAttribute="centerX" id="f1G-PI-SUo"/>
-                            <constraint firstItem="SnJ-8R-OVc" firstAttribute="width" secondItem="J6r-pZ-bfZ" secondAttribute="width" constant="-50" id="hNQ-9s-rqg"/>
-                            <constraint firstItem="oit-gO-Q74" firstAttribute="centerX" secondItem="J6r-pZ-bfZ" secondAttribute="centerX" constant="-61" id="i58-vm-a1s"/>
-                            <constraint firstItem="SnJ-8R-OVc" firstAttribute="top" secondItem="D9V-f9-qxB" secondAttribute="bottom" constant="36" id="k4e-Ok-5sf"/>
-                            <constraint firstItem="TtJ-ns-6ZZ" firstAttribute="centerX" secondItem="J6r-pZ-bfZ" secondAttribute="centerX" id="nVn-CH-gs7"/>
-                            <constraint firstItem="SnJ-8R-OVc" firstAttribute="top" secondItem="3zN-5u-4nT" secondAttribute="bottom" constant="36" id="osn-Vz-meH"/>
-                            <constraint firstItem="SnJ-8R-OVc" firstAttribute="top" secondItem="oit-gO-Q74" secondAttribute="bottom" constant="36" id="qTb-jm-9dt"/>
-                            <constraint firstItem="7vI-K5-wB4" firstAttribute="centerX" secondItem="J6r-pZ-bfZ" secondAttribute="centerX" id="vfz-mX-xPw"/>
+                            <constraint firstItem="T4u-Kq-91V" firstAttribute="centerX" secondItem="HRj-WE-yJr" secondAttribute="centerX" id="0HP-1Q-UMW"/>
+                            <constraint firstItem="MJ1-IB-6fs" firstAttribute="centerX" secondItem="HRj-WE-yJr" secondAttribute="centerX" constant="-29" id="4nm-N9-zfS"/>
+                            <constraint firstItem="wWg-Ng-z9D" firstAttribute="top" secondItem="T4u-Kq-91V" secondAttribute="bottom" constant="40" id="6uN-Jb-oqm"/>
+                            <constraint firstItem="ICd-Vz-39e" firstAttribute="leading" secondItem="MJ1-IB-6fs" secondAttribute="trailing" constant="-1.3333333333333712" id="8p7-Sy-yS0"/>
+                            <constraint firstItem="T4u-Kq-91V" firstAttribute="top" secondItem="m0R-Fc-WQg" secondAttribute="bottom" constant="25" id="A7h-Sy-NZv"/>
+                            <constraint firstItem="MJ1-IB-6fs" firstAttribute="leading" secondItem="m0R-Fc-WQg" secondAttribute="trailing" constant="-1.6666666666666856" id="B1f-iN-kP9"/>
+                            <constraint firstItem="p6r-fV-FZY" firstAttribute="centerX" secondItem="HRj-WE-yJr" secondAttribute="centerX" id="CEb-2z-SuM"/>
+                            <constraint firstItem="T4u-Kq-91V" firstAttribute="centerY" secondItem="HRj-WE-yJr" secondAttribute="centerY" id="ElR-IL-wgS"/>
+                            <constraint firstItem="L2c-Mb-FUX" firstAttribute="centerX" secondItem="HRj-WE-yJr" secondAttribute="centerX" id="FoN-wo-UMB"/>
+                            <constraint firstItem="cbO-80-wlZ" firstAttribute="bottom" secondItem="p6r-fV-FZY" secondAttribute="bottom" constant="15" id="O3g-c1-Azv"/>
+                            <constraint firstItem="L2c-Mb-FUX" firstAttribute="top" secondItem="cbO-80-wlZ" secondAttribute="top" constant="10" id="QMm-u3-WCv"/>
+                            <constraint firstItem="T4u-Kq-91V" firstAttribute="top" secondItem="MJ1-IB-6fs" secondAttribute="bottom" constant="28" id="TFa-ac-bgj"/>
+                            <constraint firstItem="wWg-Ng-z9D" firstAttribute="centerX" secondItem="HRj-WE-yJr" secondAttribute="centerX" id="m1F-hD-6Y8"/>
+                            <constraint firstItem="T4u-Kq-91V" firstAttribute="top" secondItem="ICd-Vz-39e" secondAttribute="bottom" constant="25" id="uMw-Si-gcq"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="h0d-ZD-KWC"/>
+                        <viewLayoutGuide key="safeArea" id="cbO-80-wlZ"/>
                     </view>
                     <connections>
-                        <outlet property="progressBar" destination="SnJ-8R-OVc" id="H7R-Lf-T2N"/>
-                        <outlet property="releaseHintLabel" destination="7vI-K5-wB4" id="Yy7-QK-lpz"/>
-                        <outlet property="startUIButton" destination="TtJ-ns-6ZZ" id="F5h-uy-LqM"/>
-                        <outlet property="timerCountMLabel" destination="oit-gO-Q74" id="cXF-Gz-rhT"/>
-                        <outlet property="timerCountSLabel" destination="3zN-5u-4nT" id="YMg-uG-AJW"/>
+                        <outlet property="circularProgressBar" destination="T4u-Kq-91V" id="Qvh-1e-Obt"/>
+                        <outlet property="releaseHintLabel" destination="wWg-Ng-z9D" id="DqN-gh-Hqa"/>
+                        <outlet property="startUIButton" destination="L2c-Mb-FUX" id="jW4-3P-T1y"/>
+                        <outlet property="timerCountMLabel" destination="m0R-Fc-WQg" id="hdR-j1-rLN"/>
+                        <outlet property="timerCountSLabel" destination="ICd-Vz-39e" id="vQq-g3-6l4"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rQq-ua-idY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3R-zv-UWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1867" y="613"/>
+            <point key="canvasLocation" x="1868" y="600"/>
         </scene>
     </scenes>
 </document>

@@ -25,7 +25,7 @@
     intervalsPassed = 0;
     _goalTime = [goalSeconds floatValue] + [goalMinutes floatValue] * 60;
     NSLog(@"%f",_goalTime);
-    self.progressBar.progress = 0;
+    [_circularProgressBar setProgress:0 animated:FALSE];
 }
 -(void)update{
     NSTimeInterval currentUnixTime = [[NSDate date] timeIntervalSince1970];
@@ -50,7 +50,8 @@
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         NSLog(@"BZZ");
     }
-    self.progressBar.progress = progressToInterval / _goalTime;
+    float progress = timeElapsed / _goalTime;
+    [_circularProgressBar setProgress:progress animated:FALSE];
 }
 -(IBAction)startTimer:(id)sender{
     if ([justInvalidated isEqualToString:@"NO"]) {
@@ -87,7 +88,7 @@
     timeElapsed = 0;
     timerCountSLabel.text = [NSString stringWithFormat:@"00.00"];
     timerCountMLabel.text = [NSString stringWithFormat:@"00"];
-    self.progressBar.progress = 0;
+    [_circularProgressBar setProgress:0 animated:TRUE];
     [startUIButton setTitle:@"Hold and release to start" forState:UIControlStateNormal];
 }
 
