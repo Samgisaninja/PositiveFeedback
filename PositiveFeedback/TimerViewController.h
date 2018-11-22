@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "TimePickerViewController.h"
+#import <QuartzCore/QuartzCore.h>
+#import "CircleProgressBar.h"
 
 @interface TimerViewController : UIViewController{
     IBOutlet UILabel *timerCountSLabel;
@@ -21,11 +23,11 @@
     int intervalsPassed;
 }
 @property (strong, nonatomic) IBOutlet UILabel *releaseHintLabel;
-@property (strong, nonatomic) IBOutlet UIProgressView *progressBar;
 @property (strong, nonatomic) NSNumber *goalMinutes;
 @property (strong, nonatomic) NSNumber *goalSeconds;
 @property (strong, nonatomic) NSNumber *runDistance;
 @property float goalTime;
 @property float goalInterval;
+@property (strong, nonatomic) IBOutlet CircleProgressBar *circularProgressBar;
 
 @end
