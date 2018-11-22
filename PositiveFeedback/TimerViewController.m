@@ -25,7 +25,7 @@
     intervalsPassed = 0;
     _goalTime = [goalSeconds floatValue] + [goalMinutes floatValue] * 60;
     _goalInterval = _goalTime / [runDistance floatValue];
-    [_circularProgressBar setProgress:0.5 animated:FALSE];
+    [_circularProgressBar setProgress:0 animated:FALSE];
 }
 -(void)update{
     NSTimeInterval currentUnixTime = [[NSDate date] timeIntervalSince1970];
