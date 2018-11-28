@@ -24,7 +24,6 @@
     timeElapsed = 0;
     intervalsPassed = 0;
     _goalTime = [goalSeconds floatValue] + [goalMinutes floatValue] * 60;
-    NSLog(@"%f",_goalTime);
     [_circularProgressBar setProgress:0 animated:FALSE];
 }
 -(void)update{
@@ -48,7 +47,6 @@
         relativeStartTime = [NSDate date];
         intervalsPassed = intervalsPassed + 1;
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-        NSLog(@"BZZ");
     }
     float progress = timeElapsed / _goalTime;
     [_circularProgressBar setProgress:progress animated:FALSE];
