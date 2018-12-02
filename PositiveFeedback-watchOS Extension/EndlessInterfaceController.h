@@ -32,6 +32,7 @@
 @property (strong, nonatomic) HKHealthStore *healthStore;
 @property float goalTime;
 @property float goalInterval;
+@property (strong, nonatomic) UIFont *monospacedNumberSystemFont;
 @end
 
 

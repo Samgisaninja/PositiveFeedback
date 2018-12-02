@@ -39,7 +39,14 @@
     _runningWorkoutConfig.locationType = HKWorkoutSessionLocationTypeOutdoor;
     _runningWorkout = [[HKWorkoutSession alloc] initWithConfiguration:_runningWorkoutConfig error:nil];
     _healthStore = [HKHealthStore new];
-    
+    UIFont *systemFont = [UIFont systemFontOfSize:35];
+    UIFontDescriptor *monospacedNumberFontDescriptor = [systemFont.fontDescriptor fontDescriptorByAddingAttributes: @{
+                                                                                                                    UIFontDescriptorFeatureSettingsAttribute: @[@{
+                                                                                                                                                                      UIFontFeatureTypeIdentifierKey: @6,
+                                                                                                                                                                      UIFontFeatureSelectorIdentifierKey: @0
+                                                                                                                                                                      }]
+                                                                                                                      }];
+    _monospacedNumberSystemFont = [UIFont fontWithDescriptor:monospacedNumberFontDescriptor size:0];
 }
 
 - (void)willActivate {
@@ -58,14 +65,22 @@
     NSInteger minutesElapsed = (timeElapsedInteger / 60) % 60;
     NSTimeInterval secondsElapsed = timeElapsed - 60 * minutesElapsed;
     if (secondsElapsed < 10) {
-        _timerCountSLabel.text = [NSString stringWithFormat:@"0%.2f",secondsElapsed];
+        NSMutableAttributedString *timerCountSLabelText = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"0%.2f", secondsElapsed]];
+        [timerCountSLabelText addAttribute:NSFontAttributeName value:_monospacedNumberSystemFont range:NSMakeRange(0, timerCountSLabelText.string.length)];
+        [_timerCountSLabel setAttributedText:timerCountSLabelText];
     } else {
-        _timerCountSLabel.text = [NSString stringWithFormat:@"%.2f",secondsElapsed];
+        NSMutableAttributedString *timerCountSLabelText = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%.2f", secondsElapsed]];
+        [timerCountSLabelText addAttribute:NSFontAttributeName value:_monospacedNumberSystemFont range:NSMakeRange(0, timerCountSLabelText.string.length)];
+        [_timerCountSLabel setAttributedText:timerCountSLabelText];
     }
     if (minutesElapsed < 10) {
-        _timerCountMLabel.text = [NSString stringWithFormat:@"0%.1ld",(long)minutesElapsed];
+        NSMutableAttributedString *timerCountMLabelText = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"0%.1ld",(long)minutesElapsed]];
+        [timerCountMLabelText addAttribute:NSFontAttributeName value:_monospacedNumberSystemFont range:NSMakeRange(0, timerCountMLabelText.string.length)];
+        [_timerCountMLabel setAttributedText:timerCountMLabelText];
     } else {
-        _timerCountMLabel.text = [NSString stringWithFormat:@"%.1ld",(long)minutesElapsed];
+        NSMutableAttributedString *timerCountMLabelText = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%.1ld",(long)minutesElapsed]];
+        [timerCountMLabelText addAttribute:NSFontAttributeName value:_monospacedNumberSystemFont range:NSMakeRange(0, timerCountMLabelText.string.length)];
+        [_timerCountMLabel setAttributedText:timerCountMLabelText];
     }
     float progressToInterval = currentUnixTime - [relativeStartTime timeIntervalSince1970];
     if (progressToInterval > _goalInterval) {
