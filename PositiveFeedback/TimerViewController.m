@@ -49,7 +49,7 @@
         intervalsPassed = intervalsPassed + 1;
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     }
-    float progress = timeElapsed / _goalTime;
+    float progress = progressToInterval / _goalInterval;
     [_circularProgressBar setProgress:progress animated:FALSE];
     if (timeElapsed > _goalTime) {
         [secondsTimer invalidate];

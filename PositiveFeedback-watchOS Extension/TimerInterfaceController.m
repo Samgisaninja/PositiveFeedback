@@ -88,7 +88,7 @@
         intervalsPassed = intervalsPassed + 1;
         [[WKInterfaceDevice currentDevice] playHaptic:WKHapticTypeFailure];
     }
-    float percentProgressToGoal = timeElapsed / _goalTime;
+    float percentProgressToGoal = progressToInterval / _goalInterval;
     percentProgressToGoal = percentProgressToGoal * 100;
     NSInteger percentProgressToGoalInt = (NSInteger) roundf(percentProgressToGoal);
     [_progressBarPicker setSelectedItemIndex:percentProgressToGoalInt];
