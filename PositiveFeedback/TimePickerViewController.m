@@ -8,7 +8,6 @@
 
 #import "TimePickerViewController.h"
 #import "TimerViewController.h"
-#import "DistancePickerViewController.h"
 #import "EndlessViewController.h"
 
 @interface TimePickerViewController (){

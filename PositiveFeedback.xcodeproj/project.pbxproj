@@ -29,7 +29,6 @@
 		8DAEC22E20044D0D00EDB61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DAEC22D20044D0D00EDB61F /* Assets.xcassets */; };
 		8DAEC23220044D0D00EDB61F /* PositiveFeedback-watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8DAEC21620044D0C00EDB61F /* PositiveFeedback-watchOS.app */; };
 		8DB6FFC621327AEE00F4F0CA /* LapsInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB6FFC521327AEE00F4F0CA /* LapsInterfaceController.m */; };
-		8DD5143E1FF2FA5F00BC6247 /* DistancePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5143D1FF2FA5F00BC6247 /* DistancePickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,8 +113,6 @@
 		8DAEC22F20044D0D00EDB61F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DB6FFC421327AEE00F4F0CA /* LapsInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LapsInterfaceController.h; sourceTree = "<group>"; };
 		8DB6FFC521327AEE00F4F0CA /* LapsInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LapsInterfaceController.m; sourceTree = "<group>"; };
-		8DD5143C1FF2FA5F00BC6247 /* DistancePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistancePickerViewController.h; sourceTree = "<group>"; };
-		8DD5143D1FF2FA5F00BC6247 /* DistancePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistancePickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,8 +164,6 @@
 				8D1205A31FD0D33900691524 /* AppDelegate.m */,
 				8D1ADF2A21A7176B00913520 /* CircleProgressBar.h */,
 				8D1ADF2B21A7177600913520 /* CircleProgressBar.m */,
-				8DD5143C1FF2FA5F00BC6247 /* DistancePickerViewController.h */,
-				8DD5143D1FF2FA5F00BC6247 /* DistancePickerViewController.m */,
 				8D8421FD20C99F3D002484D2 /* EndlessViewController.h */,
 				8D8421FE20C99F3D002484D2 /* EndlessViewController.m */,
 				8D1205A51FD0D33900691524 /* TimePickerViewController.h */,
@@ -369,7 +364,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DD5143E1FF2FA5F00BC6247 /* DistancePickerViewController.m in Sources */,
 				8D65181C1FD3940500AB167F /* TimerViewController.m in Sources */,
 				8D1205A71FD0D33900691524 /* TimePickerViewController.m in Sources */,
 				8D1205B21FD0D33900691524 /* main.m in Sources */,
