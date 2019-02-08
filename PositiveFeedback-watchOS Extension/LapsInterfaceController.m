@@ -32,7 +32,7 @@
 }
 
 -(IBAction)minusButton:(id)sender{
-    runDistanceFloat = runDistanceFloat -1.0;
+    runDistanceFloat = runDistanceFloat - 1.0;
     _runDistance = @(roundf(runDistanceFloat));
     [[self runDistanceLabel] setText:[NSString stringWithFormat:@"%.f", roundf(runDistanceFloat)]];
 }
